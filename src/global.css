@@ -116,6 +116,7 @@ button:hover {
 .skill {
 	margin: 0;
 	padding: 0;
+	border-bottom: 1px solid white;
 	text-align: start;
 	cursor: pointer;
 }
