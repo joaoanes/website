@@ -34,6 +34,7 @@
     role,
     companyName,
     companyLink,
+    current,
     location,
     whatDo,
   } = history
@@ -42,9 +43,15 @@
 <div id={year} class="grow-h-container">
   <div class="history-container align-center">
     <div class="top">
-      <div class="left align-end limit-width center">
-        <span class="date">{date}</span>
-        <span class="role">{role}</span>
+      <div class="left flex align-end limit-width center">
+        <span class="date">{role}</span>
+        <div class="grow-h-container column current-role">
+          <span class="role">{date}</span>
+          {#if current}
+          <span class="current">(current)</span>
+        {/if}
+        </div> 
+        
       </div>
       <div
         class="right container horizontal align-start limit-width center
@@ -78,6 +85,12 @@
 </div>
 
 <style>
+  .current {
+    font-size: 12px;
+    line-height: 32px;
+    margin-left: 20px;
+  }
+
   .endzone {
     font-weight: bold;
   }
@@ -104,10 +117,19 @@
     font-size: 40px;
   }
 
+  .current {
+    margin-right: 0;
+    margin-left: auto;
+    line-height: 2px;
+    margin-bottom: 5px;
+  }
+
   .role {
     font-size: 27px;
     line-height: 40px;
     margin-left: 20px;
+    margin-right: 0;
+    margin-left: auto;
   }
 
   .history-divider {
@@ -120,7 +142,6 @@
 
   @media (max-width: 1280px) {
     .role {
-      margin-left: 0;
       line-height: 20px;
     }
 
@@ -136,6 +157,9 @@
 
     .role {
       font-size: 20px;
+      display: flex;
+      margin-right: 0;
+      margin-left: auto;
     }
 
     .what-do {
