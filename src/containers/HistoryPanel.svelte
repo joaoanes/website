@@ -44,13 +44,13 @@
   <div class="history-container align-center">
     <div class="top">
       <div class="left flex align-end limit-width center">
-        <span class="date">{role}</span>
-        <div class="grow-h-container column current-role">
-          <span class="role">{date}</span>
-          {#if current}
+        <div class="current-container">
+        <span class="role">{role}</span>
+        {#if current}
           <span class="current">(current)</span>
         {/if}
-        </div> 
+        </div>
+          <span class="date">{date}</span>
         
       </div>
       <div
@@ -87,8 +87,7 @@
 <style>
   .current {
     font-size: 12px;
-    line-height: 32px;
-    margin-left: 20px;
+    line-height: 28px;
   }
 
   .endzone {
@@ -113,18 +112,11 @@
     font-size: 12px;
   }
 
-  .date {
+  .role {
     font-size: 40px;
   }
 
-  .current {
-    margin-right: 0;
-    margin-left: auto;
-    line-height: 2px;
-    margin-bottom: 5px;
-  }
-
-  .role {
+  .date {
     font-size: 27px;
     line-height: 40px;
     margin-left: 20px;
@@ -141,7 +133,7 @@
   }
 
   @media (max-width: 1280px) {
-    .role {
+    .date {
       line-height: 20px;
     }
 
@@ -151,11 +143,11 @@
       margin-bottom: 10px;
     }
 
-    .date {
+    .role {
       font-size: 25px;
     }
 
-    .role {
+    .date {
       font-size: 20px;
       display: flex;
       margin-right: 0;
