@@ -12,4 +12,4 @@
 
   # Default build command.
   command = "yarn; cd ..; yarn; cd sapper-app; yarn export"
-
+  ignore = "exit 1"
