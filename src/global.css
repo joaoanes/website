@@ -160,6 +160,7 @@ button:hover {
 		flex-wrap: wrap;
 		justify-content: center;
 		margin-bottom: 10px;
+		margin-right: 0;
 	}
 	.skill {
 		padding: 2px;

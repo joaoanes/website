@@ -32,10 +32,6 @@
     margin-top: 10px;
   }
 
-  .talk-column {
-    margin-right: 20px;
-  }
-
   .skills-container {
     min-height: 300px;
   }
