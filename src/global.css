@@ -160,6 +160,7 @@ button:hover {
 		flex-wrap: wrap;
 		justify-content: center;
 		margin-bottom: 10px;
+		margin-right: 0;
 	}
 	.skill {
 		padding: 2px;
@@ -227,7 +228,7 @@ button:hover {
 	border-bottom: 2px solid white;
 }
 
-.dork-mode .skill {
+.dork-mode .skill, .dork-mode .skill * {
 	color: black;
 }
 
@@ -241,6 +242,7 @@ button:hover {
 
 .dork-mode a {
 	color: white;
+	text-decoration: underline;
 }
 
 .dork-mode .header {

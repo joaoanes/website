@@ -46,9 +46,6 @@
     min-height: 200px;
   }
 
-  .skill-column {
-    margin-right: 20px;
-  }
 
   @media (max-width: 1280px) {
     .skill-column {
