@@ -89,21 +89,21 @@ export const createScene = (el, dorkMode) => {
 }
 
 const vertexShader = `
-attribute vec3 center;
 uniform float delta;
-varying vec3 vCenter;
 
 void main() {
-    vCenter = center;
-    gl_Position = projectionMatrix * modelViewMatrix * 
-      vec4(
-        position.x, 
-        position.y, 
-        position.z 
-        + (position.z / 2.0 * sin(position.x + delta)) 
-        + (position.z / 2.0 * cos(position.y + delta)),
-        1.0
-      );
+  float zOffset = position.z / 2.0;
+  float sinOffset = sin(delta);
+  float cosOffset = cos(delta);
+  float sinX = sin(position.x);
+  float cosY = cos(position.y);
+  gl_Position = projectionMatrix * modelViewMatrix * 
+    vec4(
+      position.x, 
+      position.y, 
+      position.z + zOffset * (sinOffset * sinX + cosOffset * cosY),
+      1.0
+    );
 }
 `
 
