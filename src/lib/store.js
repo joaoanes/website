@@ -17,33 +17,33 @@ export const store = {
         Ruby:
           "Experience with Ruby both as a scripting language as well as extensive Rails/ActiveRecord knowledge acquired after maintaining multiple Rails services. Minitest > Rspec.",
         "Node.js":
-          "Experience with Node.js from one-shot scripts to Express.js servers with proper testing and support. Used extensively in personal web scraping projects.",
+          "Experience with Node.js from one-shot scripts to Next.js webapps with proper testing and support. Used extensively in personal web scraping projects and as glue code for when bash can't cut it.",
         Elixir:
-          "Experience with Elixir as a back-end tool when high throughput and uptime safety is required. I like Ecto and Phoenix. Used significantly in personal projects as GraphQL backend of choice.",
+          "Experience with Elixir as a back-end tool when high throughput and uptime safety is required. Phoenix LiveView is a great alternative to the modern frontend malaises. Used significantly in personal projects as GraphQL backend of choice.",
       },
       {
         Docker:
-          "Experience with docker and containerization, mostly as a part of build pipelines. 'It works on my machine' - 'Then we'll ship your machine",
+          "Experience with docker, image building, containerization, and debugging build pipelines. 'It works on my machine' - 'Then we'll ship your machine, here's a dockerfile.",
         "POSIX Bash":
-          "Skilled in command composition, heavy user of |. Will write bash scripts for automation if let run amok.",
+          "Maintained and built bash cathedrals and trash fires alike. Will write bash scripts for automation if let run amok and will install oh-my-zsh on your whole team's machines.",
         Terraform:
-          "Extensive experience configuring Linux-based servers, with a preference for Debian-like environments. Shell script advocate, zsh fan, nginx/caddy experience. I like Ubuntu.",
+          "Extensive experience configuring Linux-based servers, with a preference for Debian-like environments. Shell script advocate, nginx/caddy experience. Everything is a provider!",
         Kubernetes:
-          "Experience with K8s clusters, tuning of kubernetes monitors, and live environmental updates responding to load.",
+          "Experience with managing and managing K8s clusters and deployment pipelines, tuning of kubernetes monitors, and autoscaling. Once added an ssh server to a cluster just to ssh local port forward to another network!",
       },
     ],
     [
       {
-        mentorship:
-          "Believer that teams grow exponentially with the growth of its individual elements. Plus, I only know what I know because someone told me once - need to pay it forward!"
+        Mentorship:
+          "Believer that companies and teams grow exponentially with the growth of its individual elements, and doer by 1:1 mentorship, strong, concise code reviews and plenty of appreciation. Plus, I only know what I know because someone told me once - need to pay it forward!"
       },
       {
-        "tech leadership":
+        "Tech leadership":
           "Capable of providing and implementing the technical vision for solutions to the company's problems, from lower-level implementation details with the developers to the high-level coordination of releases, features and roadmap.",
-        "Agile (that works)":
-          "Strong experience with agile methodologies and implementations, from strong-willed complete SCRUM implementations, to SCRUM-lite skunkworks procedures. Strong believer that SCRUM is not a silver bullet.",
-        "release mgmt":
-          "Experience with REST/HATEOAS applications, self-describing APIs. Proud evangelist of GraphQL if performance isn't a massive concern.",
+        "Agile [(that works)]":
+          "Strong experience with agile methodologies and implementations, from strong-willed complete SCRUM implementations, to SCRUM-lite skunkworks procedures. Strong believer that SCRUM is not a silver bullet, but motivated people are nigh unstoppable.",
+        "Release Management":
+          "Experience with coordinating release features with stakeholders, from task assignment, to acceptance criteria, to managing the technicalities of deployment procedures and keeping the team on a cycle.",
       },
       {
         "Typescript":
@@ -57,21 +57,21 @@ export const store = {
     ],
     [
       {
-        "observability & logs":
-          "Without proper logging and proper observability, you'll find yourself in a world of hurt when unexpected things happen. Proper monitoring is as important as being live.",
-        "metrics monitoring":
-          "From database load to average query resolution times, these numbers drive user experience. Keeping track of them is core if you care about product.",
+        "Observability [& logs]":
+          "Experience and steward of ensuring as much information possible is logged in order to understand unexpected behaviour and to properly categorize user metrics. Log levels are great.",
+        "Metrics [& monitoring]":
+          "From database load to average query resolution times, these numbers drive user experience. Keeping track of them is core if you care about your product. Dashboard maniac.",
       },
 
       {
         "AWS cloud":
-          "Years experience with AWS. EC2, S3, Route 53, multi-az concerns, VPC configuration, Lambda, API Gateway, ECS",
+          "Years experience with AWS. EC2, S3, Route 53, multi-az concerns, VPC configuration, Lambda, API Gateway, ECS, EKS, IAM",
         "devops":
-          "Strong believer in “devops” culture. Every engineer should be able to deploy from scratch without outside help.",
+          "Strong believer in “devops” culture, starting with every dev and ending with all the ops. Every engineer should be able to deploy from scratch without outside help.",
       },
 
       {
-        "CI & automation":
+        "CI [& automation]":
           "Champion for automation whenever possible. The true job of the IT worker is to use technology to solve problems at scale - automation and being able to automate business processes is our key contribution to the business.",
         "design principles": "papyrus or comic sans? graphics design is my passion"
       },
@@ -79,8 +79,9 @@ export const store = {
   ],
   history: [
     {
-      role: "Project Tech Lead",
+      role: "Tech Lead",
       date: "2021",
+      current: true,
       companyName: "Applied Blockchain Ltd",
       companyLink: "https://appliedblockchain.com",
       location: "Porto, PT / London, UK",
@@ -90,7 +91,7 @@ export const store = {
         "Helmed 2 different projects in the finance space with regards to project direction and management of the development team",
         "Spearheaded the development of a live market platform that transacted $6M USD between users, artists and marketplaces",
         "Supported the integration of a blockchain based solution in parallel with the development of the core platform and coordinated QA efforts",
-        "Architected onboarding of 5+ new clients each with bespoke platform requirements and modes of operation in a scalable and maintainable way",
+        "Architected onboarding of 5+ high profile clients each with bespoke platform requirements and modes of operation in a scalable and maintainable way",
         "Navigated a turbulent release period and provided effective post-release support and maintenance efforts",
         "Provided on-location support in critical project milestones and to ensure quick execution when dealing with difficult situations",
         "Grew a cross-functional team from 1 to 8 developers to deliver on the project's shifting needs",
