@@ -228,7 +228,8 @@ button:hover {
 	border-bottom: 2px solid white;
 }
 
-.dork-mode .skill, .dork-mode .skill * {
+.dork-mode .skill, 
+.dork-mode .skill * {
 	color: black;
 }
 
