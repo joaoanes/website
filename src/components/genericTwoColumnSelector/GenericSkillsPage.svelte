@@ -1,5 +1,5 @@
 <script>
-  import GenericButton from "./SkillButton.svelte"
+  import GenericButton from "./ArtSkillButton.svelte"
   import GenericDesc from "./SkillDesc.svelte"
   import TwoColumnContainer from "./TwoColumnContainer.svelte"
 
