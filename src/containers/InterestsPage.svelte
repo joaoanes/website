@@ -1,10 +1,10 @@
 <script>
-  import { chunk } from "lodash"
+  import { chunk, shuffle } from "lodash"
   export let store
 
   const { interests } = store
   const { preamble, rest } = interests
-  const [interests1, interests2] = chunk(rest, Math.floor(rest.length / 2))
+  const [interests1, interests2] = chunk(shuffle(rest), Math.floor(rest.length / 2))
 </script>
 
 <div class="skill-container">
