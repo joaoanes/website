@@ -299,7 +299,7 @@ html[data-useragent*='rv:11.0'] .front, html[data-useragent*='rv:11.0']  .back {
   position: relative;
   left: 10%;
   color: white;
-  font-size: 300;
+  font-size: 100;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: -2;
   -webkit-text-stroke: 0.6px;
