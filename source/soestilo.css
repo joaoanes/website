@@ -43,7 +43,8 @@ html[data-useragent*='rv:11.0'] .front, html[data-useragent*='rv:11.0']  .back {
   -webkit-backface-visibility: hidden;
   position: absolute;
   top: 0;
-  left: 0
+  left: 0;
+  overflow: visible;
 }
 
 .front {
@@ -102,21 +103,6 @@ html[data-useragent*='rv:11.0'] .front, html[data-useragent*='rv:11.0']  .back {
 }
 
 
-.skills_masonry
-{
-  margin: 0 auto;
-}
-
-.skill_card_masonry
-{
-  width: 200px;
-  height: 200px;
-  background: red;
-}
-
-
-
-
 .mryholder
 {
   margin: 0 auto;
@@ -148,7 +134,7 @@ html[data-useragent*='rv:11.0'] .front, html[data-useragent*='rv:11.0']  .back {
 
 #engineers_are_human_too
 {
-  background-color: #b1ff35;
+  background-color: #9ED546;
   border: 1px solid white;
   color: black;
   cursor: pointer;
@@ -350,7 +336,7 @@ html[data-useragent*='rv:11.0'] .front, html[data-useragent*='rv:11.0']  .back {
 .top_button_s
 {
 
-  border-bottom: 5px solid #b1ff35;
+  border-bottom: 5px solid #9ED546;
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 30px;
@@ -370,10 +356,16 @@ html[data-useragent*='rv:11.0'] .front, html[data-useragent*='rv:11.0']  .back {
 
 .top_button_s:hover
 {
-  color: #b1ff35 !important;
+  color: #9ED546 !important;
 }
 
-
+.scroll_helper
+{
+    font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+}
 
 body{
 
@@ -438,7 +430,8 @@ body{
 
 #human_div
 {
-  background-color: #b1ff35;
+  background-color: #9ED546;
+  background-color: #9ED546;
 }
 
 #human_div > div
@@ -509,7 +502,7 @@ body{
 
 .container_image
 {
-  float: left;
+
   width: 350px;
   height: 350px;
   margin: 0 auto;
@@ -527,6 +520,33 @@ body{
 {
   background-image: url('img/zoom_light.png');
 }
+
+.newContainer
+{
+  margin: 0 auto;
+  color: white;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin-bottom: 150px;
+}
+
+.newContainer > *
+{
+  flex-grow: 1;
+}
+
+.newContainer .phone
+{
+  width: 417px;
+  height: 350px;
+  position: relative;
+  margin: auto;
+}
 .container
 {
   color: white;
@@ -538,23 +558,32 @@ body{
   font-weight: 300;
 }
 
-.container .title
+.container .title, .newContainer .title
 {
   margin-top: 20px;
-  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 10px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 700;
   font-size: 50px;
 }
 
-.container .content
+.container .content, .newContainer .content
 {
   padding-left: 40px;
   font-size: 20px;
   float: right;
   width: 350px;
   height: 350px;
-  border-left: 2px solid white;
 }
 
+.newContainer .content
+{
+  padding-left: none;
+  padding: 10px;
+   height: auto;
+  float: none;
+  margin: auto;
+}
 
 .skills
 {
@@ -563,10 +592,22 @@ body{
 
 }
 
+.newSkills > div
+{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
 
 #skills_human .skill_title_wrapper
 {
   color: white;
+}
+
+.newSkills .skill_card
+{
+  margin: auto;
 }
 
 .skill_card
@@ -582,7 +623,6 @@ body{
   transition-duration:0.5s;
   transition-timing-function:ease-out;
 
-  float: left;
 }
 
 .skill_card:last-child
@@ -628,7 +668,7 @@ body{
 .skill_title_small.human
 {
 
-  background-color: #b1ff35;
+  background-color: #9ED546;
   color: black;
 }
 
@@ -650,7 +690,7 @@ body{
 
 .skill_title
 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   opacity: 0.3;
   z-index: 90;
   position: absolute;
@@ -967,7 +1007,7 @@ body{
 .side_menu_element.human
 {
   color: black;
-  border-right: 5px solid #b1ff35;
+  border-right: 5px solid #9ED546;
   background: rgba(215, 255, 0, 0.7);
 }
 

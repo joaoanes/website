@@ -2,6 +2,9 @@ var currentHeader = "#start";
 var tinyHeader = false;
 var headerMap = {};
 var colorMap = {};
+
+var phoneOn = false;
+
 headerMap["#des"] = "#bg2";
 headerMap["#eng"] = "#bg1";
 headerMap["#photo"] = "#bg3";
@@ -156,6 +159,11 @@ function changeHeader(destination) {
                                     isFitWidth: true
                                 });
                             }
+                            if (destination === "#eng" && !phoneOn)
+                            {
+                                phoneOn = true;
+                                setTimeout(function(){$("#yo").html('<object width="100%" height="100%" data="yestour.php"/>');}, 600) 
+                            }
                         });
                 });
 
@@ -175,7 +183,6 @@ function changeHeader(destination) {
 var flipped = false;
 var previous;
 $(document).ready(function () {
-
     var doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
 
@@ -341,7 +348,7 @@ $(document).ready(function () {
 
     $('.container_image.cool').hover(function () {
         $(this).css("background-size", "0");
-        $(this.parentNode.childNodes[3]).hide(); //fadeOut(500);
+        $($(this).parent().parent().children()[1]).hide("slide", 400); //fadeOut(500);
         $(this).velocity({
             "width": "700px",
             "height": "700px"
@@ -355,7 +362,7 @@ $(document).ready(function () {
             "height": "350px"
         }, 500, function () {
 
-            $(this.parentNode.childNodes[3]).fadeIn(500);
+            $ ($(this).parent().parent().children()[1]).fadeIn(500);
         });
         this.src = global_name;
     });
@@ -431,8 +438,6 @@ function updateImageWall() {
 
 
 $(window).scroll(function () {
-
-
 
     $(".mryholder_reverse").masonry('layout');
 
