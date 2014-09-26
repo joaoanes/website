@@ -127,6 +127,12 @@ function changeHeader(destination) {
         tinyHeader = true;
     }
 
+    if (destination === "#eng" && !phoneOn)
+                            {
+                                phoneOn = true;
+                                setTimeout(function(){$("#yo").html('<object width="100%" height="100%" data="yestour.php"/>');}, 600) 
+                            }
+
     if (currentHeader == "#start") {
         $(destination + "_div").fadeIn(500, function () {
             if (destination == "#photo") {
@@ -159,11 +165,7 @@ function changeHeader(destination) {
                                     isFitWidth: true
                                 });
                             }
-                            if (destination === "#eng" && !phoneOn)
-                            {
-                                phoneOn = true;
-                                setTimeout(function(){$("#yo").html('<object width="100%" height="100%" data="yestour.php"/>');}, 600) 
-                            }
+                            
                         });
                 });
 
