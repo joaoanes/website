@@ -339,10 +339,9 @@ $(document).ready(function () {
         if (hash == "#resume") {
             setTimeout(flip, 1000);
         } else {
-            var stuff = (hash.substring(0, hash.lastIndexOf("_")));
             window.setTimeout(function () {
-                $(stuff).trigger("click");
-            }, 800);
+                $(hash).trigger("click");
+            }, 1500);
         }
     }
 
