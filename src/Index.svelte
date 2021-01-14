@@ -15,7 +15,6 @@
   } = store;
 </script>
 
-<div class="header">Under construction</div>
 <PageContainer>
   <div class="left align-center">
     <div class="name-container limit-width">
@@ -35,8 +34,24 @@
     </div>
   </div>
 </PageContainer>
+<div class="header column">
+  <div class="left align-center" />
+  <div class="right align-center">
+    <div class="container justify-end limit-width center">
+      <a class="link" href="#skills">Skills</a>
+      <a class="link" href="#roles">Roles</a>
+    </div>
+  </div>
+  <div class="header-divider" />
+</div>
 
 <SkillPage {store} />
+
+<div class="container">
+  <div class="left">
+    <span class="limit-width center roles" id="roles">Roles</span>
+  </div>
+</div>
 
 {#each history as hist}
   <HistoryPanel history={hist} />
@@ -45,6 +60,18 @@
 <style>
   h1 {
     font-size: 80px;
+  }
+
+  .roles {
+    font-size: 50px;
+    margin-bottom: 75px;
+  }
+
+  .link {
+    color: black;
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: 400;
   }
 
   h3,
@@ -79,6 +106,13 @@
     margin-top: 20px;
   }
 
+  .header-divider {
+    width: 60%;
+    background-color: black;
+    height: 2px;
+    margin-right: 50px;
+  }
+
   .subtitle {
     margin-top: 40px;
     text-align: end;
@@ -101,22 +135,16 @@
 
   .header {
     width: 100%;
-    height: 60px;
+    height: 80px;
     font-size: 40px;
     font-family: "CascadiaCode";
     display: flex;
-    justify-content: center;
-    background: repeating-linear-gradient(
-      45deg,
-      rgba(253, 229, 8, 0.4),
-      rgba(253, 229, 8, 0.4),
-      10px,
-      rgba(0, 0, 0, 0.3) 10px,
-      rgba(0, 0, 0, 0.3) 20px
-    );
+    align-items: flex-end;
+    justify-content: flex-end;
     position: sticky;
     top: 0;
     color: black;
-    transform: translateY(20px);
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 200px;
   }
 </style>

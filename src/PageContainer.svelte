@@ -4,7 +4,7 @@
 
 <style>
   div {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex: 1;
     flex-direction: row;

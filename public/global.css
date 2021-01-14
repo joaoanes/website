@@ -81,3 +81,11 @@ button:focus {
 button:hover {
 	background-color: #D4D4D4;
 }
+
+.history-divider {
+    height: 2px;
+    width: 90%;
+    background-color: black;
+    margin-bottom: 50px;
+    margin-top: 18px;
+  }
