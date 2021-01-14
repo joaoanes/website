@@ -15,6 +15,33 @@
   } = store;
 </script>
 
+<div class="header">Under construction</div>
+<PageContainer>
+  <div class="left align-center">
+    <div class="name-container limit-width">
+      <h1 class="name">{name}</h1>
+      <span class="title">{title}</span>
+      <div class="divider" />
+      <h3 class="subtitle">{subtitle}</h3>
+    </div>
+  </div>
+  <div class="right align-center">
+    <div class="name-container limit-width">
+      <span class="quote">{quote}</span>
+      <div class="description">
+        {#each description as desc}<span>{desc}</span>{/each}
+      </div>
+      <span class="lookingFor">{lookingFor}</span>
+    </div>
+  </div>
+</PageContainer>
+
+<SkillPage {store} />
+
+{#each history as hist}
+  <HistoryPanel history={hist} />
+{/each}
+
 <style>
   h1 {
     font-size: 80px;
@@ -93,30 +120,3 @@
     transform: translateY(20px);
   }
 </style>
-
-<div class="header">Under construction</div>
-<PageContainer>
-  <div class="left align-center">
-    <div class="name-container limit-width">
-      <h1 class="name">{name}</h1>
-      <span class="title">{title}</span>
-      <div class="divider" />
-      <h3 class="subtitle">{subtitle}</h3>
-    </div>
-  </div>
-  <div class="right align-center">
-    <div class="name-container limit-width">
-      <span class="quote">{quote}</span>
-      <div class="description">
-        {#each description as desc}<span>{desc}</span>{/each}
-      </div>
-      <span class="lookingFor">{lookingFor}</span>
-    </div>
-  </div>
-</PageContainer>
-
-<SkillPage {store} />
-
-{#each history as hist}
-  <HistoryPanel history={hist} />
-{/each}

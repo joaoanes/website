@@ -31,6 +31,46 @@
   });
 </script>
 
+<div id={history.year} class="grow-h-container">
+  <div class="history-container align-center">
+    <div class="top">
+      <div class="left align-end limit-width center">
+        <span class="date">{history.date}</span>
+        <span class="role">{history.role}</span>
+      </div>
+      <div
+        class="right container horizontal align-start limit-width center
+          justify-end">
+        <div class="top">
+          <span class="company">{history.companyName}</span>
+        </div>
+        <div class="bottom">
+          <span class="location">{history.location}</span>
+        </div>
+      </div>
+    </div>
+    <div class="history-divider center" />
+    <div class="bottom">
+      <div class="left limit-width center align-start">
+        <span class="what-do">{history.whatDo}</span>
+      </div>
+      <div class="right limit-width center column blurbs">
+        {#each shownBlurbs as blurb}<span class="blurb">{blurb}</span>{/each}
+        {#if unseenBlurbs === null}
+          <div class="blurb endzone">
+            We ran out of words! Let's shuffle the deck...
+          </div>
+          <div class="loader-container">
+            <div class="loader" />
+          </div>
+        {:else}
+          <button class="more-button" on:click={moreBlurbs}>More</button>
+        {/if}
+      </div>
+    </div>
+  </div>
+</div>
+
 <style>
   .endzone {
     font-weight: bold;
@@ -158,43 +198,3 @@
     }
   }
 </style>
-
-<div id={history.year} class="grow-h-container">
-  <div class="history-container align-center">
-    <div class="top">
-      <div class="left align-end limit-width center">
-        <span class="date">{history.date}</span>
-        <span class="role">{history.role}</span>
-      </div>
-      <div
-        class="right container horizontal align-start limit-width center
-          justify-end">
-        <div class="top">
-          <span class="company">{history.companyName}</span>
-        </div>
-        <div class="bottom">
-          <span class="location">{history.location}</span>
-        </div>
-      </div>
-    </div>
-    <div class="history-divider center" />
-    <div class="bottom">
-      <div class="left limit-width center align-start">
-        <span class="what-do">{history.whatDo}</span>
-      </div>
-      <div class="right limit-width center column blurbs">
-        {#each shownBlurbs as blurb}<span class="blurb">{blurb}</span>{/each}
-        {#if unseenBlurbs === null}
-          <div class="blurb endzone">
-            We ran out of words! Let's shuffle the deck...
-          </div>
-          <div class="loader-container">
-            <div class="loader" />
-          </div>
-        {:else}
-          <button class="more-button" on:click={moreBlurbs}>More</button>
-        {/if}
-      </div>
-    </div>
-  </div>
-</div>

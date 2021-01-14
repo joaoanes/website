@@ -1,14 +1,12 @@
 <div>
-	<slot></slot>
-</div> 
-
+  <slot />
+</div>
 
 <style>
-	div {
-		height: 100vh;
-		display: flex;
-		flex: 1;
-		flex-direction: row;
-	}
+  div {
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+  }
 </style>
-

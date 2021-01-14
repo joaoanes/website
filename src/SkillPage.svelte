@@ -18,49 +18,6 @@
   };
 </script>
 
-<style>
-  .skills-cta {
-    font-size: 50px;
-    margin-bottom: 100px;
-  }
-
-  .skill-container {
-    margin-bottom: 200px;
-  }
-
-  .skill-column {
-    margin-right: 20px;
-  }
-
-  .skill {
-    margin: 0;
-    padding: 0;
-    text-align: start;
-  }
-
-  .skill-description {
-    font-family: "Exo2Italic";
-    font-size: 24px;
-  }
-
-  .no-skill {
-    color: #afafaf;
-    font-family: "Exo2Italic";
-  }
-
-  .selected {
-    background-color: #d4d4d4;
-  }
-
-  .easter-egg {
-    position: absolute;
-  }
-
-  .frog {
-    max-width: 500px;
-  }
-</style>
-
 <div class="skill-container">
   <div class="container column">
     <div class="top justify-start">
@@ -106,3 +63,46 @@
     </div>
   </div>
 </div>
+
+<style>
+  .skills-cta {
+    font-size: 50px;
+    margin-bottom: 100px;
+  }
+
+  .skill-container {
+    margin-bottom: 200px;
+  }
+
+  .skill-column {
+    margin-right: 20px;
+  }
+
+  .skill {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+  }
+
+  .skill-description {
+    font-family: "Exo2Italic";
+    font-size: 24px;
+  }
+
+  .no-skill {
+    color: #afafaf;
+    font-family: "Exo2Italic";
+  }
+
+  .selected {
+    background-color: #d4d4d4;
+  }
+
+  .easter-egg {
+    position: absolute;
+  }
+
+  .frog {
+    max-width: 500px;
+  }
+</style>
