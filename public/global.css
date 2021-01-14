@@ -1,12 +1,17 @@
 @font-face {
 	font-family: 'CascadiaCode';
 	src: url('./CascadiaCode.woff2'); 
-  }
+}
 
-  @font-face {
+@font-face {
 	font-family: 'Exo2Italic';
 	src: url('./Exo2-ExtraLightItalic.ttf'); 
-  }
+}
+
+@font-face {
+	font-family: 'SourceSansLight';
+	src: url('./SourceSansPro-ExtraLight.ttf'); 
+}
 
 html, body {
 	position: relative;
@@ -58,6 +63,7 @@ button {
 	color: #333;
 	background-color: #f4f4f4;
 	outline: none;
+	border: none;
 }
 
 button:disabled {
@@ -70,4 +76,8 @@ button:not(:disabled):active {
 
 button:focus {
 	border-color: #666;
+}
+
+button:hover {
+	background-color: #D4D4D4;
 }
