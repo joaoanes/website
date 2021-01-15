@@ -118,4 +118,31 @@
   .hilarious-misalign {
     transform: translateY(-140px) translateX(-130px);
   }
+
+  @media (max-width: 540px) {
+    .skill-column {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      padding: 2px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .skills-cta {
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .skill-description {
+      font-size: 20px;
+      min-height: 200px;
+    }
+
+    .skill-container {
+      margin-bottom: 20px;
+    }
+  }
 </style>

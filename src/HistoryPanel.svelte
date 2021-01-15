@@ -85,13 +85,6 @@
     margin-bottom: 50px;
   }
 
-  .bottom,
-  .top {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
   .what-do {
     font-family: "Exo2Italic";
     font-size: 30px;
@@ -117,6 +110,30 @@
     background-color: black;
     margin-bottom: 50px;
     margin-top: 18px;
+  }
+
+  @media (max-width: 540px) {
+    .role {
+      margin-left: 0;
+    }
+
+    .history-divider {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .date {
+      font-size: 25px;
+    }
+
+    .role {
+      font-size: 20px;
+    }
+
+    .what-do {
+      font-size: 22px;
+    }
   }
 
   .blurb {

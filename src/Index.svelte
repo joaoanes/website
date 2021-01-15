@@ -147,4 +147,62 @@
     background-color: rgba(255, 255, 255, 0.8);
     margin-bottom: 200px;
   }
+
+  @media (max-width: 540px) {
+    .name {
+      margin-top: 30px;
+      font-size: 40px;
+    }
+
+    .title {
+      font-size: 23px;
+    }
+
+    .name-container * {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .subtitle {
+      margin-top: 40px;
+      text-align: end;
+      font-size: 20px;
+    }
+
+    .description {
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    .roles {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .header .container {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+
+    .header .right {
+      margin-bottom: 0px;
+    }
+
+    .header a {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .quote {
+      margin-top: 10px;
+    }
+
+    .subtitle {
+      display: none;
+    }
+
+    .header-divider {
+      margin-right: 35px;
+    }
+  }
 </style>

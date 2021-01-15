@@ -82,3 +82,46 @@
 .grow {
 	flex-grow: 1;
 }
+
+.page-container {
+	display: flex;
+    height: 80vh;
+  }
+
+
+@media(max-width:540px) {
+
+	.left, .right {
+		flex-direction: column;
+		width: 100%;
+		max-width: 100%;
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+	.page-container {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.top, .bottom {
+		flex-direction: column;
+	}
+
+	.grow-h-container { 
+		margin-left: 40px;
+		margin-right: 40px; 
+	}
+
+	.left.align-end {
+		align-items: flex-start;
+	}
+
+	.role {
+		margin-left: 0;
+	}
+
+	.container {
+		flex-direction: column;
+	}
+}
