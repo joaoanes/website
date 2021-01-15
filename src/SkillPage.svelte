@@ -121,6 +121,8 @@
     .skill-column {
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 10px;
     }
 
     .skill {
@@ -135,6 +137,14 @@
 
     .skill-container {
       margin-bottom: 20px;
+    }
+
+    .hilarious-misalign {
+      transform: initial;
+    }
+
+    .frog {
+      width: 50vh;
     }
   }
 </style>
