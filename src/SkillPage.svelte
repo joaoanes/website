@@ -24,7 +24,7 @@
   <div class="container column">
     <div class="top justify-start">
       <div class="left">
-        <div class="skills-cta center limit-width" id="skills">
+        <div class="linked-ctas center limit-width" id="skills">
           Relevant skills
         </div>
       </div>
@@ -47,12 +47,8 @@
           {/each}
         </div>
       </div>
-      <div class="right align-center align-start">
-        {#if activeSkill[0] === null}
-          <div class="no-skill limit-width center">
-            (please select a skill from the nearby panel).
-          </div>
-        {:else if designSkillActive(activeSkill[0])}
+      <div class="right align-center align-start skill-description-container">
+        {#if designSkillActive(activeSkill[0])}
           <div class="easter-egg">
             <img
               alt="Graphic design is my passion (ironically misaligned)"
@@ -60,8 +56,10 @@
               src="./graphics.png" />
           </div>
         {:else}
-          <div class="skill-description limit-width center">
-            {activeSkill[1]}
+          <div
+            class="{activeSkill[0] ? 'skill-description' : 'no-skill'} limit-width
+              center">
+            {activeSkill[1] || '(please select a skill from the nearby panel).'}
           </div>
         {/if}
       </div>
@@ -70,9 +68,8 @@
 </div>
 
 <style>
-  .skills-cta {
-    font-size: 50px;
-    margin-bottom: 100px;
+  .skill-description-container {
+    min-height: 200px;
   }
 
   .skill-container {
@@ -95,7 +92,8 @@
   }
 
   .art {
-    font-family: "Comic Sans MS", "Papyrus";
+    font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue",
+      sans-serif;
   }
 
   .no-skill {
@@ -131,14 +129,8 @@
       margin-right: 10px;
     }
 
-    .skills-cta {
-      margin-bottom: 20px;
-      font-size: 30px;
-    }
-
     .skill-description {
       font-size: 20px;
-      min-height: 200px;
     }
 
     .skill-container {

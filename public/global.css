@@ -1,16 +1,16 @@
 @font-face {
 	font-family: 'CascadiaCode';
-	src: url('./CascadiaCode.woff2'); 
+	src: url('./CascadiaCode.woff2');
 }
 
 @font-face {
 	font-family: 'Exo2Italic';
-	src: url('./Exo2-ExtraLightItalic.ttf'); 
+	src: url('./Exo2-ExtraLightItalic.ttf');
 }
 
 @font-face {
 	font-family: 'SourceSansLight';
-	src: url('./SourceSansPro-ExtraLight.ttf'); 
+	src: url('./SourceSansPro-ExtraLight.ttf');
 }
 
 html, body {
@@ -28,7 +28,7 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
+	color: rgb(0, 100, 200);
 	text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: black;
 }
 
 label {
@@ -83,9 +83,15 @@ button:hover {
 }
 
 .history-divider {
-    height: 2px;
-    width: 90%;
-    background-color: black;
-    margin-bottom: 50px;
-    margin-top: 18px;
-  }
+	height: 2px;
+	width: 90%;
+	background-color: black;
+	margin-bottom: 50px;
+	margin-top: 18px;
+}
+
+@media (max-width: 540px) {
+	a {
+		text-decoration: underline;
+	}
+}

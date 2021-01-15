@@ -115,6 +115,7 @@
   @media (max-width: 540px) {
     .role {
       margin-left: 0;
+      line-height: 20px;
     }
 
     .history-divider {
