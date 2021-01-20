@@ -16,8 +16,8 @@
 [[redirects]]
   from = "/"
   to = "/automatic_download.html"
-  status = 302
-
+  status = 200
+  force = true
   conditions = { referer = [ "https://joaoanes.website/" ] }
 
 [[headers]]
