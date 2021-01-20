@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Exo2Italic', "Exo 2";
+    src: url('https://joaoanes.website/Exo2-ExtraLightItalic.ttf');
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.embed {
+    width: 60%;
+    height: 80%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+}
+
+div {
+    font-family: "Exo2Italic", "Exo 2";
+    font-style: italic;
+    font-weight: 300;
+}
