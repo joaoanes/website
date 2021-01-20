@@ -11,9 +11,13 @@
   from = "/"
   to = "/JoaoAnesCV.pdf"
   status = 302
-  force = true
 
   conditions = { referer = [ "https://joaoanes.website" ] }
+
+[[redirects]]
+  from = "/embed"
+  to = "/JoaoAnesCV.pdf"
+  status = 200
 
 [[headers]]
   for = "/JoaoAnesCV.pdf"
