@@ -167,53 +167,55 @@
         ],
       },
     ],
-    tooling: [
-      [
-        {
-          Google:
-            "The world's most powerful and complete repository of knowledge, used to mostly just understand what the error message I just got really means. Expert at search terms and knowing what to ask.",
-          "VS Code":
-            "Mainly due to the language server protocol, which enables very powerful code features, like semantic highlighting, really good autocomplete, symbol search, autodocumentation, etc. Better extension support than the leading brands (since nobody wants to deal with vimscript). Heavy code-server user.",
-          "terminal emulator & zsh":
-            "I keep a quake-like terminal on a system hotkey, since you can solve too many problems with bash scripts and pipes. Can exit from a vim window, and fork bomb your instances.",
-          "git & Github":
-            "Any VCS system is necessary nowadays, but the simplicity of git's model, workflows like the feature branch PR workflow, and code-review capabilities make git and github my favourite tool to develop software as a team (and by myself).",
-          terraform:
-            'Primary reason why I like "devops" so much. Being able to setup your infrastructure and build/destroy it at will enables powerful things, such as easy personal developer environment setups and easy rollbacks in case of network failure.',
-        },
+    tooling: {
+      preamble: "Tools I shouldn't ever work without",
+      rest: [
+        [
+          {
+            Google:
+              "The world's most powerful and complete repository of knowledge, used to mostly just understand what the error message I just got really means. Expert at search terms and knowing what to ask.",
+            "VS Code":
+              "Mainly due to the language server protocol, which enables very powerful code features, like semantic highlighting, really good autocomplete, symbol search, autodocumentation, etc. Better extension support than the leading brands (since nobody wants to deal with vimscript). Heavy code-server user.",
+            "terminal emulator & zsh":
+              "I keep a quake-like terminal on a system hotkey, since you can solve too many problems with bash scripts and pipes. Can exit from a vim window, and fork bomb your instances.",
+            "git & Github":
+              "Any VCS system is necessary nowadays, but the simplicity of git's model, workflows like the feature branch PR workflow, and code-review capabilities make git and github my favourite tool to develop software as a team (and by myself).",
+            terraform:
+              'Primary reason why I like "devops" so much. Being able to setup your infrastructure and build/destroy it at will enables powerful things, such as easy personal developer environment setups and easy rollbacks in case of network failure.',
+          },
+        ],
+        [
+          {
+            asdf:
+              "Amazing tool to setup dependencies from yarn to node to erlang and keep them consistent across developer environments.",
+            grep:
+              "And ack. Find every needle in the haystack and sort it with a single bash line.",
+            "CircleCI and CI in general":
+              "Best integration and configuration capability, wether it's checking files for style issues or deploy a commit to production.",
+            docker:
+              "Or containerization in general, even though I don't like kubernetes since I never got to play with an infrastructure large enough to justify it :(",
+            REPLs:
+              "The core tool in my programmer arsenal. Having a proper REPL, specially allied to a powerful debugger suite, allows any developer to execute and inspect defects as they happen.",
+            AWS:
+              "My favoured cloud provider, specially because of their powerful APIs that enable tools such as terraform to exist and perform so admirably.",
+          },
+        ],
+        [
+          {
+            Asana:
+              "Asana integrates with every service we could ask for, and its UI is unintrusive enough to power cross-functional-team coordination and project status visibility. Strong and easy to use automation.",
+            Slack:
+              "Or Teams. Or Matrix. Or just plain ol' IRC. As long as it has channels, private messaging, webhook integration, voice and maybe video group calls and strong notification support, and as long as all the stakeholders are there, it works.",
+            English:
+              "Fluency with strong linguistic skills, being able to effectively communicate ideas across. Very very slight accent.",
+            Illustrator:
+              "Proeficient at media creation, settled on using Illustrator as a main driver (vs Photoshop) since vector design is way easier and manageable than raster design. Can step in a designer's shoes if need be.",
+          },
+        ],
       ],
-      [
-        {
-          asdf:
-            "Amazing tool to setup dependencies from yarn to node to erlang and keep them consistent across developer environments.",
-          grep:
-            "And ack. Find every needle in the haystack and sort it with a single bash line.",
-          "CircleCI and CI in general":
-            "Best integration and configuration capability, wether it's checking files for style issues or deploy a commit to production.",
-          docker:
-            "Or containerization in general, even though I don't like kubernetes since I never got to play with an infrastructure large enough to justify it :(",
-          REPLs:
-            "The core tool in my programmer arsenal. Having a proper REPL, specially allied to a powerful debugger suite, allows any developer to execute and inspect defects as they happen.",
-          AWS:
-            "My favoured cloud provider, specially because of their powerful APIs that enable tools such as terraform to exist and perform so admirably.",
-        },
-      ],
-      [
-        {
-          Asana:
-            "Asana integrates with every service we could ask for, and its UI is unintrusive enough to power cross-functional-team coordination and project status visibility. Strong and easy to use automation.",
-          Slack:
-            "Or Teams. Or Matrix. Or just plain ol' IRC. As long as it has channels, private messaging, webhook integration, voice and maybe video group calls and strong notification support, and as long as all the stakeholders are there, it works.",
-          English:
-            "Fluency with strong linguistic skills, being able to effectively communicate ideas across. Very very slight accent.",
-          Illustrator:
-            "Proeficient at media creation, settled on using Illustrator as a main driver (vs Photoshop) since vector design is way easier and manageable than raster design. Can step in a designer's shoes if need be.",
-        },
-      ],
-    ],
+    },
     talks: {
-      preamble:
-        "I like public speaking, and as such, here's my best-recorded talks:",
+      preamble: "I like public speaking. Here's my best-recorded talks",
       rest: [
         {
           name: "React Natively",
@@ -311,7 +313,6 @@
             "Mobile support via grid system",
             "Internationalization support",
             "Design inspired on existing CV design, adapted to mobile",
-            "<hydration>",
           ],
           negs: [
             "Svelte isn't nearly as nice as React and I kind of don't like it",

@@ -14,35 +14,24 @@
     </div>
   </div>
   <div class="right align-center">
-    <div class="container justify-end limit-width center">
+    <div class="container justify-start limit-width center">
       <div on:click={scrollIntoView('skills')} class="link">Skills</div>
       <div on:click={scrollIntoView('roles')} class="link">Roles</div>
       <div on:click={scrollIntoView('extras')} class="link">Etc</div>
-      <div on:click={scrollIntoView('cv')} class="link">
-        CV <span class="pdf">(pdf)</span>
-      </div>
+      <div on:click={scrollIntoView('cv')} class="link">CV</div>
     </div>
   </div>
 </div>
 
 <style>
-  .pdf {
-    font-size: 15px;
-    line-height: 25px;
-  }
-
   .link {
     max-height: 50px;
     display: flex;
     align-items: flex-end;
     outline: none;
     cursor: pointer;
-  }
-
-  .right div {
-    font-size: 30px;
-    margin-left: 20px;
-    margin-bottom: 5px;
+    margin-right: 25px;
+    margin-bottom: 10px;
   }
 
   .right .container div:hover {
@@ -88,8 +77,18 @@
   @media (max-width: 540px) {
     .header {
       height: 30px;
-      margin-bottom: 100px;
+      margin-bottom: 250px;
       border-bottom: 1px solid black;
+    }
+
+    .link {
+      font-size: 12px;
+      margin-bottom: 5px;
+      margin-right: 10px;
+    }
+
+    .right .link {
+      margin-bottom: 8px;
     }
 
     .header .container {

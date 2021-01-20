@@ -95,3 +95,78 @@ button:hover {
 		text-decoration: underline;
 	}
 }
+
+.skill-description-container {
+	min-height: 200px;
+}
+
+.skill-container {
+	margin-bottom: 300px;
+}
+
+.skill-column {
+	margin-right: 20px;
+}
+
+.skill {
+	margin: 0;
+	padding: 0;
+	text-align: start;
+}
+
+.skill-description {
+	font-family: "Exo2Italic";
+	font-size: 24px;
+}
+
+.art {
+	font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", sans-serif;
+}
+
+.no-skill {
+	color: #afafaf;
+	font-family: "Exo2Italic";
+}
+
+.selected {
+	background-color: #d4d4d4;
+}
+
+.easter-egg {
+	position: absolute;
+}
+
+.frog {
+	max-width: 500px;
+}
+
+.hilarious-misalign {
+	transform: translateY(-140px) translateX(-130px);
+}
+
+@media (max-width: 540px) {
+	.skill-column {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+	.skill {
+		padding: 2px;
+		margin-left: 10px;
+		margin-right: 10px;
+		text-align: center;
+	}
+	.skill-description {
+		font-size: 20px;
+	}
+	.skill-container {
+		margin-bottom: 20px;
+	}
+	.hilarious-misalign {
+		transform: initial;
+	}
+	.frog {
+		width: 50vh;
+	}
+}

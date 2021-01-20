@@ -16,24 +16,28 @@
     </div>
     {#each rest as { name, description, source, link, blurbs, negs }}
       <div class="bottom work">
-        <div class="left column justify-start limit-width center align-start">
-          <div class="name">{name}</div>
-          <div class="description">{description}</div>
-          <a class="source" href={source}>Source</a>
-          {#if link}<a class="link" href={link}>Link</a>{/if}
+        <div class="left column justify-start center align-start">
+          <div class="container center limit-width column">
+            <div class="name">{name}</div>
+            <div class="description">{description}</div>
+            <a class="source" href={source}>Source</a>
+            {#if link}<a class="link" href={link}>Link</a>{/if}
+          </div>
         </div>
         <div
           class="right align-center align-start column
             skill-description-container">
-          <div class="blurbs">
-            {#each blurbs as blurb}
-              <div class="blurb">{blurb}</div>
-            {/each}
-          </div>
-          <div class="negs">
-            {#each negs as neg}
-              <div class="blurb neg">{neg}</div>
-            {/each}
+          <div class="container center column limit-width">
+            <div class="blurbs">
+              {#each blurbs as blurb}
+                <div class="blurb">{blurb}</div>
+              {/each}
+            </div>
+            <div class="negs">
+              {#each negs as neg}
+                <div class="blurb neg">{neg}</div>
+              {/each}
+            </div>
           </div>
         </div>
       </div>
@@ -80,6 +84,14 @@
   @media (max-width: 540px) {
     .skill-container {
       margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 20px;
+    }
+
+    .description {
+      font-size: 18px;
     }
   }
 </style>

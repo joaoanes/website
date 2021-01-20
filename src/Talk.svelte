@@ -6,7 +6,7 @@
 </script>
 
 <div class="skills-container container center limit-width">
-  <div class="column container skill-column">
+  <div class="column container talk-column align-start justify-start">
     <div class="name">{name}</div>
     <div class="description">{description}</div>
     {#if presentation}
@@ -33,7 +33,7 @@
     margin-top: 10px;
   }
 
-  .skill-column {
+  .talk-column {
     margin-right: 20px;
   }
 
@@ -42,11 +42,14 @@
   }
 
   @media (max-width: 540px) {
-    .skill-column {
+    .talk-column {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
       margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 20px;
     }
   }
 </style>

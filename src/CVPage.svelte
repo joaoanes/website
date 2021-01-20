@@ -69,5 +69,9 @@
     .skill-container {
       margin-bottom: 20px;
     }
+
+    .download {
+      width: 65vw;
+    }
   }
 </style>

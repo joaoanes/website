@@ -1,6 +1,5 @@
 <script>
   import AboveFold from "./AboveFold.svelte";
-  import ExtrasPage from "./ToolingPage.svelte";
   import Header from "./Header.svelte";
   import HistoryPanel from "./HistoryPanel.svelte";
   import SkillPage from "./SkillPage.svelte";
@@ -11,6 +10,7 @@
   import PersonalWorkPage from "./PersonalWorkPage.svelte";
   import InterestsPage from "./InterestsPage.svelte";
   import CvPage from "./CVPage.svelte";
+
   const { history } = store;
 </script>
 
@@ -30,10 +30,9 @@
   <HistoryPanel history={hist} />
 {/each}
 
-<ToolingPage {store} />
-
 <TalksPage {store} />
 
+<ToolingPage {store} />
 <PersonalWorkPage {store} />
 <InterestsPage {store} />
 <CvPage {store} />
