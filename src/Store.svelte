@@ -98,6 +98,7 @@
           "Assisted team leaders and management with feature proposal, prototyping and roadmapping",
           "Maintained public developer documentation and example implementation on integration management via gitbooks",
           "Built training materials for usage with 3+ partner support outsource partners regarding usage, features and quirks of application",
+          "Assisted operations teams employing automation to look for sybil attacks after user growth spikes",
         ],
       },
       {
@@ -166,5 +167,188 @@
         ],
       },
     ],
+    tooling: [
+      [
+        {
+          Google:
+            "The world's most powerful and complete repository of knowledge, used to mostly just understand what the error message I just got really means. Expert at search terms and knowing what to ask.",
+          "VS Code":
+            "Mainly due to the language server protocol, which enables very powerful code features, like semantic highlighting, really good autocomplete, symbol search, autodocumentation, etc. Better extension support than the leading brands (since nobody wants to deal with vimscript). Heavy code-server user.",
+          "terminal emulator & zsh":
+            "I keep a quake-like terminal on a system hotkey, since you can solve too many problems with bash scripts and pipes. Can exit from a vim window, and fork bomb your instances.",
+          "git & Github":
+            "Any VCS system is necessary nowadays, but the simplicity of git's model, workflows like the feature branch PR workflow, and code-review capabilities make git and github my favourite tool to develop software as a team (and by myself).",
+          terraform:
+            'Primary reason why I like "devops" so much. Being able to setup your infrastructure and build/destroy it at will enables powerful things, such as easy personal developer environment setups and easy rollbacks in case of network failure.',
+        },
+      ],
+      [
+        {
+          asdf:
+            "Amazing tool to setup dependencies from yarn to node to erlang and keep them consistent across developer environments.",
+          grep:
+            "And ack. Find every needle in the haystack and sort it with a single bash line.",
+          "CircleCI and CI in general":
+            "Best integration and configuration capability, wether it's checking files for style issues or deploy a commit to production.",
+          docker:
+            "Or containerization in general, even though I don't like kubernetes since I never got to play with an infrastructure large enough to justify it :(",
+          REPLs:
+            "The core tool in my programmer arsenal. Having a proper REPL, specially allied to a powerful debugger suite, allows any developer to execute and inspect defects as they happen.",
+          AWS:
+            "My favoured cloud provider, specially because of their powerful APIs that enable tools such as terraform to exist and perform so admirably.",
+        },
+      ],
+      [
+        {
+          Asana:
+            "Asana integrates with every service we could ask for, and its UI is unintrusive enough to power cross-functional-team coordination and project status visibility. Strong and easy to use automation.",
+          Slack:
+            "Or Teams. Or Matrix. Or just plain ol' IRC. As long as it has channels, private messaging, webhook integration, voice and maybe video group calls and strong notification support, and as long as all the stakeholders are there, it works.",
+          English:
+            "Fluency with strong linguistic skills, being able to effectively communicate ideas across. Very very slight accent.",
+          Illustrator:
+            "Proeficient at media creation, settled on using Illustrator as a main driver (vs Photoshop) since vector design is way easier and manageable than raster design. Can step in a designer's shoes if need be.",
+        },
+      ],
+    ],
+    talks: {
+      preamble:
+        "I like public speaking, and as such, here's my best-recorded talks:",
+      rest: [
+        {
+          name: "React Natively",
+          description:
+            "A talk I gave at a couple of conferences about React Native, a framework to build snappy mobile apps with webdev-like technology. Went over the pros and cons of the framework, and live-demoed the development of a simple app to show off developer experience and MVP tool potential.",
+          presentation: "https://www.youtube.com/watch?v=dSH7dDaA6pk",
+          link: "https://brave-bartik-6be526.netlify.app/",
+        },
+        {
+          name: 'A-Frame WebVR, aka "WebVR for people - even webdevs"',
+          description:
+            "Talk presented in Pixels Camp 2016 and a couple of meetups, about a WebVR framework, A-Frame, its uses (both in technical and not technical terms) and its future. I also share the insights we gained from developing a VR game MVP internally at Life on Mars.",
+          presentation: "https://www.youtube.com/watch?v=30JiFcKkAHE",
+          link: "https://laughing-varahamihira-06290f.netlify.app/#/",
+        },
+        {
+          name: "A Server from Scratch -- A Devops Primer",
+          description:
+            "Workshop targetting entry-level devs and graduates, workshopping how the creation process of a webserver works via live demo and helping workshoppers personally. Used terraform and digital ocean to configure ~30 nodes and led workshoppers through the paces of installing a http server, a gitlab instance among other software.",
+          link: "https://2017.makeorbreak.io/#workshops",
+          image:
+            "https://miro.medium.com/max/500/1*FJibZv-IEv5cxnJoCcKJgQ.jpeg",
+        },
+        {
+          name: "Terraforming cloud cubed worlds - with one-liners and whimsy",
+          description:
+            "A talk intended for the cancelled Pixels Camp v4 in 2020, in which we 'live demo' the creation of something tangible from scratch - a fully featured minecraft server/administration platform - with a bit of flair and terraform.",
+          link:
+            "https://github.com/PixelsCamp/talks/blob/master/2020/terraforming-cubed-worlds_joao-anes.md",
+        },
+      ],
+    },
+    personalWork: {
+      preamble:
+        "I sometimes develop software for fun. Here's a couple of good examples.",
+      rest: [
+        {
+          name: "raid.network",
+          description:
+            "Elixir-powered PWA to help Pokemon Go players find other players",
+          blurbs: [
+            "AWS-hosted, terraform managed infra-as-code",
+            "Backend built with Elixir for scalability and developer experience",
+            "Queue-based matchmaking systems",
+            "Frontend managed and deployed with netlify",
+            "React frontend web app, with simplified routing",
+            "Heavy use of HTML5 notifications and service workers",
+            "Heavy use of websockets for communication",
+            "Clean backend separation of concerns, with http server and core services separated",
+            "Backend tests for both app server and core modules",
+            "Performant interactive frontend with inspired design and css animations",
+            "Frontend testing via storybooks testing all application states",
+          ],
+          negs: [
+            "No frontend logic testing",
+            "Forthcoming chat support",
+            "Needs a home and a community behind it",
+          ],
+          source: "https://github.com/joaoanes/autoraid",
+          link: "https://raid.network",
+        },
+        {
+          name: "shitpost.network",
+          description:
+            "Personal 9gag-like content aggregator, with a focus on link rot prevention",
+          blurbs: [
+            "AWS-hosted, terraform managed infra-as-code",
+            "Backend built with Elixir for scalability and developer experience",
+            "GraphQL-based API with mutations for interactibility",
+            "SQS-based queues for post submission, categorization, tagging and spider work",
+            "React frontend web app, optimized for media consumption and ",
+            "Emoji-based reactions and tight, controlled user interaction",
+            "Puppeteer-powered cost-effective scraping of multiple websites via AWS Lambda",
+            "Heavy use of Node.js for scraping functions",
+            "Module-based scraping system that allows for different websites to be scraped in multiple ways",
+            "S3-backed file backup for content preservation",
+            "Easy share links",
+            "Telegram-based authentication via telegram bot interaction",
+            "Future focus on enabling content bots",
+          ],
+          negs: [
+            "Barely any testing of core features",
+            "Frankly confusing scraper backend modularization",
+            "4-year development cruft and bad decision-making",
+          ],
+          source: "https://github.com/joaoanes/shitposter",
+          link: "https://shitpost.network",
+        },
+        {
+          name: "This website!",
+          description: "Svelte-based personal website",
+          blurbs: [
+            "Svelte-powered SPA",
+            "Fancy backgrounds enabled by three.js and WebGL",
+            "Mobile support via grid system",
+            "Internationalization support",
+            "Design inspired on existing CV design, adapted to mobile",
+            "<hydration>",
+          ],
+          negs: [
+            "Svelte isn't nearly as nice as React and I kind of don't like it",
+            "CSS mix of component-scoped classes and a home-rolled tailwind-like class system",
+            "No tests due to lack of imagination",
+          ],
+          source: "https://github.com/joaoanes/website",
+        },
+      ],
+    },
+    interests: {
+      preamble: "Things I'm personally interested in and keeping tabs on",
+      rest: [
+        "Full-stack development",
+        "Mentoring in software",
+        "Team management",
+        "(useful) Agile methodologies",
+        "Web frontend frameworks",
+        "Concurrency management",
+        "Scalability",
+        "Engineering Code Standards",
+        "User metrics research",
+        "Product vision workmapping",
+        "Gaming",
+        "Culture sharing",
+        "Fusion food",
+        "Online community cultures",
+        "Media preservation",
+        "Event based architectures",
+        "GraphQL APIs",
+        "Bash scripts",
+      ],
+    },
+    cvCta: "Download my CV/Resume here in pdf format",
+    cvLink: "https://cv.joaoanes.website",
+    endQuote: "Thank you for your time and consideration",
+    email: "hi@joaoanes.website",
+    emailCta: "Drop me an email!",
   };
 </script>

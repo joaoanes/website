@@ -1,34 +1,34 @@
 <script>
   export let store;
-  const { skills } = store;
+  const { tooling } = store;
+
   let activeSkill = [null, null];
 
   const setActiveSkill = (skillName, skillWords) => () => {
     activeSkill = [skillName, skillWords];
   };
 
-  const designSkillActive = (skill) => skill === "design principles";
+  // TODO make this not terrible
 </script>
 
 <div class="skill-container">
   <div class="container column">
     <div class="top justify-start">
       <div class="left">
-        <div class="linked-ctas center limit-width" id="skills">
-          Relevant skills
+        <div class="linked-ctas center limit-width" id="extras">
+          <span>Tooling</span>
         </div>
       </div>
     </div>
     <div class="bottom">
       <div class="left column justify-center align-center">
         <div class="skills-container container center limit-width">
-          {#each skills as column}
+          {#each tooling as column}
             <div class="column container skill-column">
               {#each column as skillList}
                 {#each Object.keys(skillList) as skill}
                   <button
-                    class="skill {skill == activeSkill[0] ? 'selected' : ''}
-                      {designSkillActive(activeSkill[0]) ? 'art' : ''}"
+                    class="skill {skill == activeSkill[0] ? 'selected' : ''}"
                     on:click={setActiveSkill(skill, skillList[skill])}>{skill}</button>
                 {/each}
                 <br />
@@ -38,20 +38,11 @@
         </div>
       </div>
       <div class="right align-center align-start skill-description-container">
-        {#if designSkillActive(activeSkill[0])}
-          <div class="easter-egg">
-            <img
-              alt="Graphic design is my passion (ironically misaligned)"
-              class="frog hilarious-misalign"
-              src="./graphics.png" />
-          </div>
-        {:else}
-          <div
-            class="{activeSkill[0] ? 'skill-description' : 'no-skill'} limit-width
-              center">
-            {activeSkill[1] || '(please select a skill from the nearby panel).'}
-          </div>
-        {/if}
+        <div
+          class="{activeSkill[0] ? 'skill-description' : 'no-skill'} limit-width
+            center">
+          {activeSkill[1] || '(please select a tool from the nearby panel).'}
+        </div>
       </div>
     </div>
   </div>
@@ -90,18 +81,6 @@
 
   .selected {
     background-color: #d4d4d4;
-  }
-
-  .easter-egg {
-    position: absolute;
-  }
-
-  .frog {
-    max-width: 500px;
-  }
-
-  .hilarious-misalign {
-    transform: translateY(-140px) translateX(-130px);
   }
 
   @media (max-width: 540px) {

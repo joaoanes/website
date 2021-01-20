@@ -1,4 +1,6 @@
 <script>
+  const scrollIntoView = (id) => () =>
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 </script>
 
 <div class="header">
@@ -13,10 +15,12 @@
   </div>
   <div class="right align-center">
     <div class="container justify-end limit-width center">
-      <a class="link" href="#skills">Skills</a>
-      <a class="link" href="#roles">Roles</a>
-      <a class="link" href="#roles">Extras</a>
-      <a class="link" href="#roles">CV <span class="pdf">(pdf)</span></a>
+      <div on:click={scrollIntoView('skills')} class="link">Skills</div>
+      <div on:click={scrollIntoView('roles')} class="link">Roles</div>
+      <div on:click={scrollIntoView('extras')} class="link">Etc</div>
+      <div on:click={scrollIntoView('cv')} class="link">
+        CV <span class="pdf">(pdf)</span>
+      </div>
     </div>
   </div>
 </div>
@@ -27,24 +31,22 @@
     line-height: 25px;
   }
 
-  .header-divider {
-    width: 60%;
-    background-color: black;
-    height: 2px;
-    margin-right: 50px;
-  }
-
-  a {
+  .link {
     max-height: 50px;
     display: flex;
     align-items: flex-end;
     outline: none;
+    cursor: pointer;
   }
 
-  .right a {
+  .right div {
     font-size: 30px;
     margin-left: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+  }
+
+  .right .container div:hover {
+    text-decoration: underline;
   }
 
   .header {
@@ -103,10 +105,6 @@
       font-size: 15px;
       margin-bottom: 5px;
       margin-left: 10px;
-    }
-
-    .header-divider {
-      display: none;
     }
 
     .left,

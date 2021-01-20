@@ -88,6 +88,7 @@
 .linked-ctas {
   font-size: 50px;
   margin-bottom: 100px;
+  padding-top: 150px;
 }
 
 @media(max-width:540px) {
@@ -122,5 +123,8 @@
     margin-bottom: 20px;
     font-size: 30px;
     padding-top: 50px;
+  }
+  .skill-container {
+    margin-bottom: 100px;
   }
 }
