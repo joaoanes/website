@@ -347,7 +347,7 @@
       ],
     },
     cvCta: "Download my CV/Resume here in pdf format",
-    cvLink: "https://cv.joaoanes.website",
+    cvLink: "https://cv.joaoanes.website?redir=true",
     endQuote: "Thank you for your time and consideration",
     email: "hi@joaoanes.website",
     emailCta: "Drop me an email!",
