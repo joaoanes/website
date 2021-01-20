@@ -1,0 +1,21 @@
+[build]
+  base = "/"
+  publish = "/"
+  command = ""
+
+[context.production]
+  publish = "/"
+  command = ""
+
+[[redirects]]
+  from = "/"
+  to = "/JoaoAnesCV.pdf"
+  status = 302
+  force = true
+
+  conditions = { referer = [ "https://joaoanes.website" ] }
+
+[[headers]]
+  for = "/JoaoAnesCV.pdf"
+  [headers.values]
+    Content-Disposition = "attachment; filename=JoaoAnesCV.pdf"
