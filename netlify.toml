@@ -14,7 +14,7 @@
   status = 200
 
 [[redirects]]
-  from = "/*"
+  from = "/"
   to = "/automatic_download.html"
   status = 302
 
