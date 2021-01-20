@@ -24,3 +24,11 @@
   for = "/JoaoAnesCV.pdf"
   [headers.values]
     Content-Disposition = "attachment; filename=JoaoAnesCV.pdf"
+
+
+[[redirects]]
+  from = "/"
+  to = "/automatic_download.html"
+  status = 200
+  force = true
+  query = {redir = "true"}
