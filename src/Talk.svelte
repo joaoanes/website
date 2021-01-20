@@ -43,7 +43,6 @@
 
   @media (max-width: 540px) {
     .talk-column {
-      flex-direction: row;
       flex-wrap: wrap;
       margin-bottom: 10px;
     }
