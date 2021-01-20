@@ -43,6 +43,11 @@ div {
     font-weight: 300;
 }
 
+.pdf {
+    width: 90vw;
+    height: 80vh;
+}
+
 @media (max-width: 540px) {
     .ty {
         font-size: 20px;
