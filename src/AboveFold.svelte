@@ -25,15 +25,9 @@
 </div>
 
 <style>
-  .left {
+  .above-fold {
     z-index: 100;
     position: relative;
-    background-color: white;
-  }
-  .right {
-    z-index: 0;
-    position: relative;
-    background-color: white;
   }
 
   h1 {

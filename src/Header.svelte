@@ -1,8 +1,6 @@
 <script>
   const scrollIntoView = (id) => () =>
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-
-  export let dorkMode, toggleDorkMode;
 </script>
 
 <div class="header">
@@ -27,23 +25,11 @@
         Etc
       </div>
       <div on:click={scrollIntoView('cv')} class="link with-cursor">CV</div>
-
-      <div class="name-container">
-        <img
-          on:click={toggleDorkMode}
-          alt={'Toggle dark mode'}
-          class="name dork-mode-toggler link with-cursor"
-          src="./{dorkMode ? 'sun' : 'moon'}.svg" />
-      </div>
     </div>
   </div>
 </div>
 
 <style>
-  img {
-    width: 50px;
-    height: 50px;
-  }
   .link {
     max-height: 50px;
     display: flex;
@@ -96,7 +82,6 @@
     .header {
       height: 30px;
       margin-bottom: 250px;
-      border-bottom: 1px solid black;
     }
 
     .link {
@@ -122,11 +107,6 @@
       font-size: 15px;
       margin-bottom: 5px;
       margin-left: 10px;
-    }
-
-    .left,
-    .right {
-      width: 50%;
     }
 
     .left {

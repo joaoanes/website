@@ -16,6 +16,23 @@
   let toggleDorkMode = () => (dorkMode = !dorkMode);
 </script>
 
+<div class="name-container">
+  <div class="toggler container align-end">
+    <img
+      on:click={toggleDorkMode}
+      alt={'Toggle dark mode'}
+      class="name dork-mode-toggler link with-cursor"
+      style="display: {dorkMode ? 'block' : 'none'}"
+      src="./sun.svg" />
+    <img
+      on:click={toggleDorkMode}
+      alt={'Toggle dark mode'}
+      class="name dork-mode-toggler link with-cursor"
+      style="display: {dorkMode ? 'none' : 'block'}"
+      src="./moon.svg" />
+  </div>
+</div>
+
 <div class={dorkMode ? 'dork-mode' : ''}>
   <AboveFold {store} />
 
@@ -42,4 +59,35 @@
 </div>
 
 <style>
+  img {
+    width: 50px;
+    height: 50px;
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+
+  .name-container {
+    position: fixed;
+    z-index: 10000;
+  }
+  .toggler {
+    position: fixed;
+    top: 5px;
+    right: 0;
+    cursor: pointer;
+  }
+
+  @media (max-width: 540px) {
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      margin-top: 0px;
+    }
+
+    .name-container {
+      position: sticky;
+      top: 5px;
+    }
+  }
 </style>
