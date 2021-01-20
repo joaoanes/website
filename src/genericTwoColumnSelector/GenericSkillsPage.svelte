@@ -1,13 +1,13 @@
 <script>
   import GenericButton from "./SkillButton.svelte";
   import GenericDesc from "./SkillDesc.svelte";
-
   import TwoColumnContainer from "./TwoColumnContainer.svelte";
 
   export let title, content, preamble, id;
-  let activeSkill = [null, null];
   export let SkillButton = GenericButton;
   export let SkillDesc = GenericDesc;
+
+  let activeSkill = [null, null];
 
   const setActiveSkill = (skillName, skillWords) => () => {
     activeSkill = [skillName, skillWords];

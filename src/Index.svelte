@@ -3,7 +3,6 @@
   import Header from "./Header.svelte";
   import HistoryPanel from "./HistoryPanel.svelte";
   import SkillPage from "./SkillPage.svelte";
-  // export let store;
   import { store } from "./Store.svelte";
   import ToolingPage from "./ToolingPage.svelte";
   import TalksPage from "./TalksPage.svelte";

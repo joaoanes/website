@@ -14,6 +14,7 @@
     </div>
     <div class="bottom">
       <div class="left column justify-center align-center">
+        <!-- svelte-ignore a11y-missing-attribute -->
         <a class="skills-container container center limit-width cv">
           <a href={cvLink}>{cvCta}</a>
           <div class="download"><img src="./download.svg" /></div>

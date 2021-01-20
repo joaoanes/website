@@ -1,7 +1,4 @@
 <script>
-  import PageContainer from "./PageContainer.svelte";
-  import HistoryPanel from "./HistoryPanel.svelte";
-  import SkillPage from "./SkillPage.svelte";
   // export let store;
   import { store } from "./Store.svelte";
   const { name, title, subtitle, quote, description, lookingFor } = store;

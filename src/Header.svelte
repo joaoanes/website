@@ -114,10 +114,5 @@
     .left {
       margin-bottom: 0;
     }
-
-    .pdf {
-      font-size: 10px;
-      line-height: 15px;
-    }
   }
 </style>

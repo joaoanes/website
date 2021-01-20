@@ -1,5 +1,5 @@
 <script>
-  export let title = "temp";
+  export let title;
   export let preamble;
   export let id;
 </script>
@@ -35,35 +35,5 @@
   .preamble {
     font-size: 20px;
     font-family: "SourceSansLight";
-  }
-
-  .skill-column {
-    margin-right: 20px;
-  }
-
-  .skill {
-    margin: 0;
-    padding: 0;
-    text-align: start;
-    cursor: pointer;
-  }
-
-  .selected {
-    background-color: #d4d4d4;
-  }
-
-  @media (max-width: 540px) {
-    .skill-column {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-
-    .skill {
-      padding: 2px;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
   }
 </style>

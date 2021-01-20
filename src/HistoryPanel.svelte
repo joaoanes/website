@@ -1,9 +1,9 @@
 <script>
   import { onMount } from "svelte";
 
-  import PageContainer from "./PageContainer.svelte";
   // export let store;
   export let history;
+
   let shownBlurbs = [];
   let currentTimeout;
   let unseenBlurbs = history.blurbs;

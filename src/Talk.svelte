@@ -1,5 +1,4 @@
 <script>
-  import { chunk } from "lodash";
   export let talk;
 
   const { name, description, link, image, presentation } = talk;
