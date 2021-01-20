@@ -4,7 +4,7 @@
   const { name, title, subtitle, quote, description, lookingFor } = store;
 </script>
 
-<div class="page-container">
+<div class="page-container above-fold">
   <div class="left align-center">
     <div class="name-container limit-width">
       <h1 class="name">{name}</h1>
@@ -25,8 +25,13 @@
 </div>
 
 <style>
-  .page-container {
+  .left {
     z-index: 100;
+    position: relative;
+    background-color: white;
+  }
+  .right {
+    z-index: 0;
     position: relative;
     background-color: white;
   }
@@ -78,13 +83,6 @@
     margin-left: auto;
     margin-right: auto;
     flex-direction: column;
-  }
-
-  .divider {
-    height: 2px;
-    width: 100%;
-    background-color: black;
-    margin-top: 40px;
   }
 
   @media (max-width: 540px) {

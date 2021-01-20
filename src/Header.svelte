@@ -1,6 +1,8 @@
 <script>
   const scrollIntoView = (id) => () =>
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+
+  export let dorkMode, toggleDorkMode;
 </script>
 
 <div class="header">
@@ -13,17 +15,35 @@
       </a>
     </div>
   </div>
-  <div class="right align-center">
-    <div class="container justify-start limit-width center">
-      <div on:click={scrollIntoView('skills')} class="link">Skills</div>
-      <div on:click={scrollIntoView('roles')} class="link">Roles</div>
-      <div on:click={scrollIntoView('extras')} class="link">Etc</div>
-      <div on:click={scrollIntoView('cv')} class="link">CV</div>
+  <div class="right align-center no-cursor">
+    <div class="container align-end limit-width center">
+      <div on:click={scrollIntoView('skills')} class="link with-cursor">
+        Skills
+      </div>
+      <div on:click={scrollIntoView('roles')} class="link with-cursor">
+        Roles
+      </div>
+      <div on:click={scrollIntoView('extras')} class="link with-cursor">
+        Etc
+      </div>
+      <div on:click={scrollIntoView('cv')} class="link with-cursor">CV</div>
+
+      <div class="name-container">
+        <img
+          on:click={toggleDorkMode}
+          alt={'Toggle dark mode'}
+          class="name dork-mode-toggler link with-cursor"
+          src="./{dorkMode ? 'sun' : 'moon'}.svg" />
+      </div>
     </div>
   </div>
 </div>
 
 <style>
+  img {
+    width: 50px;
+    height: 50px;
+  }
   .link {
     max-height: 50px;
     display: flex;
@@ -43,7 +63,6 @@
     height: 80px;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 2px solid black;
     font-size: 40px;
     font-family: "CascadiaCode";
     display: flex;
@@ -52,12 +71,11 @@
     position: sticky;
     top: 0;
     color: black;
-    background-color: rgba(255, 255, 255, 0.98);
     margin-bottom: 200px;
   }
 
   .name-container {
-    height: 400px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

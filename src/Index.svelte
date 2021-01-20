@@ -11,30 +11,35 @@
   import CvPage from "./CVPage.svelte";
 
   const { history } = store;
+  let dorkMode = false;
+
+  let toggleDorkMode = () => (dorkMode = !dorkMode);
 </script>
 
-<AboveFold {store} />
+<div class={dorkMode ? 'dork-mode' : ''}>
+  <AboveFold {store} />
 
-<Header />
+  <Header {toggleDorkMode} {dorkMode} />
 
-<SkillPage {store} />
+  <SkillPage {store} />
 
-<div class="container">
-  <div class="left">
-    <span class="limit-width center linked-ctas" id="roles">Roles</span>
+  <div class="container">
+    <div class="left">
+      <span class="limit-width center linked-ctas" id="roles">Roles</span>
+    </div>
   </div>
+
+  {#each history as hist}
+    <HistoryPanel history={hist} />
+  {/each}
+
+  <TalksPage {store} />
+
+  <ToolingPage {store} />
+  <PersonalWorkPage {store} />
+  <InterestsPage {store} />
+  <CvPage {store} />
 </div>
-
-{#each history as hist}
-  <HistoryPanel history={hist} />
-{/each}
-
-<TalksPage {store} />
-
-<ToolingPage {store} />
-<PersonalWorkPage {store} />
-<InterestsPage {store} />
-<CvPage {store} />
 
 <style>
 </style>
