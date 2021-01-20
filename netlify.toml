@@ -18,7 +18,7 @@
   to = "/automatic_download.html"
   status = 302
 
-  conditions = { referer = [ "https://joaoanes.website" ] }
+  conditions = { referer = [ "https://joaoanes.website/" ] }
 
 [[headers]]
   for = "/JoaoAnesCV.pdf"
