@@ -7,17 +7,18 @@
   publish = "/"
   command = ""
 
-[[redirects]]
-  from = "/"
-  to = "/automatic_download.html"
-  status = 200
-
-  conditions = { referer = [ "https://joaoanes.website" ] }
 
 [[redirects]]
   from = "/embed"
   to = "/JoaoAnesCV.pdf"
   status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/automatic_download.html"
+  status = 302
+
+  conditions = { referer = [ "https://joaoanes.website" ] }
 
 [[headers]]
   for = "/JoaoAnesCV.pdf"
