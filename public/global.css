@@ -250,3 +250,7 @@ button:hover {
 .dork-mode .header {
 	border-bottom: 1px solid white;
 }
+
+.dork-mode .neg {
+	color: rgb(245, 195, 196);
+}
