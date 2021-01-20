@@ -22,6 +22,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+}
+
+.footer div {
+    font-size: 13px;
+}
+
+.dl {
+    font-size: 30px;
 }
 
 body {
@@ -32,4 +41,10 @@ div {
     font-family: "Exo2Italic", "Exo 2";
     font-style: italic;
     font-weight: 300;
+}
+
+@media (max-width: 540px) {
+    .ty {
+        font-size: 20px;
+    }
 }
