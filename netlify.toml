@@ -9,8 +9,8 @@
 
 [[redirects]]
   from = "/"
-  to = "/JoaoAnesCV.pdf"
-  status = 302
+  to = "/automatic_download.html"
+  status = 200
 
   conditions = { referer = [ "https://joaoanes.website" ] }
 
