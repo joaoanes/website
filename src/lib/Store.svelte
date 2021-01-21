@@ -80,6 +80,7 @@
         role: "Lead Support Engineer",
         date: "2019",
         companyName: "Fractal GmbH",
+        companyLink: "https://company.fractal.id",
         location: "Porto, PT / Berlin, DE",
         whatDo:
           "Led engineering support team, bridging the operations, product and engineering team’s focuses on handling user-level issues. Introduced automation to operation teams.",
@@ -105,6 +106,7 @@
         role: "Senior Software Engineer",
         date: "2018",
         companyName: "Fractal GmbH",
+        companyLink: "https://company.fractal.id",
         location: "Porto, PT / Berlin, DE",
         whatDo:
           "Helped build security-first KYC platform, with integration via OAuth and led time-scoped feature teams. Owned system-critical identity verification platform and improved support efficiency.",
@@ -129,6 +131,7 @@
         role: "Software Engineer",
         date: "2016",
         companyName: "Life on Mars, S.A.",
+        companyLink: "https://lifeonmars.io",
         location: "Porto, PT",
         whatDo:
           "Worked on multiple projects in areas such as VR, blockchain and education and delivered MVPs for a secure art trading platform and a mobile collectible card game. Acqui-hired by Fractal.",
@@ -153,6 +156,8 @@
         role: "Lead Developer",
         date: "2014",
         companyName: "Mailcube, S.A.",
+        companyLink:
+          "http://web.archive.org/web/20160716182411/http://mailcube.com/",
         location: "Porto, PT",
         whatDo:
           "Led development team of next-gen performance and ease of use focused macOS email client with sophisticated features.",
@@ -170,6 +175,8 @@
         role: "Masters in Informatics and Computing Engineering",
         date: "2009-2014",
         companyName: "Faculty of Engineering - University of Porto",
+        companyLink:
+          "https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_curso_id=742",
         location: "Porto, PT",
         whatDo:
           "Graduated 2014 from one of universities with the best IT curriculums available, gaining valuable self-learning and self-direction skills. 15.54 grade average.",

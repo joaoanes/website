@@ -29,30 +29,38 @@
   onMount(() => {
     shuffleBlurbs();
   });
+
+  const {
+    year,
+    date,
+    role,
+    companyName,
+    companyLink,
+    location,
+    whatDo,
+  } = history;
 </script>
 
-<div id={history.year} class="grow-h-container">
+<div id={year} class="grow-h-container">
   <div class="history-container align-center">
     <div class="top">
       <div class="left align-end limit-width center">
-        <span class="date">{history.date}</span>
-        <span class="role">{history.role}</span>
+        <span class="date">{date}</span>
+        <span class="role">{role}</span>
       </div>
       <div
         class="right container horizontal align-start limit-width center
           justify-end">
         <div class="top">
-          <span class="company">{history.companyName}</span>
+          <a href={companyLink}> <span class="company">{companyName}</span> </a>
         </div>
-        <div class="bottom">
-          <span class="location">{history.location}</span>
-        </div>
+        <div class="bottom"><span class="location">{location}</span></div>
       </div>
     </div>
     <div class="history-divider center" />
     <div class="bottom">
       <div class="left limit-width center align-start">
-        <span class="what-do">{history.whatDo}</span>
+        <span class="what-do">{whatDo}</span>
       </div>
       <div class="right limit-width center column blurbs">
         {#each shownBlurbs as blurb}<span class="blurb">{blurb}</span>{/each}
