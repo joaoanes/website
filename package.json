@@ -17,6 +17,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "detect-gpu": "^3.0.0",
     "lodash": "^4.17.20",
     "sirv-cli": "^1.0.0",
     "three": "^0.124.0"
