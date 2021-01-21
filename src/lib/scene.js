@@ -1,21 +1,24 @@
 import * as THREE from 'three';
 export let uniforms = { 'dorkMode': { value: false }, 'delta': { value: 1 } };
 
+//TODO: singletonsssssssssssssssssss
 let scene;
 let renderer;
 let main, counter = 0
 
 let frame
-const camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 1000);
-const gridGeometry = new THREE.PlaneGeometry(20, 20, 19, 19);
-
+let gridGeometry
+let camera
 
 const buildScene = () => {
   //TODO: Consider disposing of previous scene
-  gridGeometry.vertices = gridGeometry.vertices.map(
-    ({ x, y, z }) => ({ x, y, z: Math.sin(Math.random() * 3.14) + Math.random() })
-  )
-
+  if (!gridGeometry) {
+    gridGeometry = new THREE.PlaneGeometry(20, 20, 19, 19);
+    camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 1000);
+    gridGeometry.vertices = gridGeometry.vertices.map(
+      ({ x, y, z }) => ({ x, y, z: Math.sin(Math.random() * 3.14) + Math.random() })
+    )
+  }
   camera.position.z = 2.5;
   camera.rotation.x = 1.5;
 
