@@ -6,9 +6,10 @@
 
   let allowed = false;
   onMount(async () => {
-    debugger;
-    const gpuTier = await getGPUTier();
-    allowed = gpuTier.tier >= 2;
+    setTimeout(async () => {
+      const gpuTier = await getGPUTier();
+      allowed = gpuTier.tier >= 2;
+    }, 1000);
   });
 </script>
 
