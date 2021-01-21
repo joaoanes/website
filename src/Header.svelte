@@ -58,10 +58,16 @@
     top: 0;
     color: black;
     margin-bottom: 200px;
+    clip-path: polygon(
+      0% 0,
+      100% 0%,
+      100% 100%,
+      0% 100%
+    ); /* I'll give it to them, modern css is pretty great */
   }
 
   .name-container {
-    height: 100vh;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

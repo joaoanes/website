@@ -182,11 +182,14 @@ button:hover {
 	.header .right {
 		width: 60%
 	}
+	.description {
+		display: flex;
+		flex-direction: column;
+		margin: 0
+	}
 }
 
-.page-container {
-	background-color: white;
-}
+.page-container {}
 
 .header {
 	background-color: rgba(255, 255, 255, 0.98);
@@ -199,10 +202,6 @@ button:hover {
 
 .with-cursor {
 	pointer-events: all;
-}
-
-.dork-mode .page-container {
-	background-color: black;
 }
 
 .dork-mode * {
@@ -237,10 +236,6 @@ button:hover {
 
 .dork-mode .download svg {
 	fill: white;
-}
-
-.dork-mode .above-fold .left, .dork-mode .above-fold .right {
-	background-color: black;
 }
 
 .dork-mode a {

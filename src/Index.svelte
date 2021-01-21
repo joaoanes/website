@@ -34,7 +34,7 @@
 </div>
 
 <div class={dorkMode ? 'dork-mode' : ''}>
-  <AboveFold {store} />
+  <AboveFold {store} {dorkMode} />
 
   <Header {toggleDorkMode} {dorkMode} />
 
