@@ -15,8 +15,11 @@
     <div class="bottom">
       <div class="left column justify-center align-center">
         <!-- svelte-ignore a11y-missing-attribute -->
-        <a class="skills-container container center limit-width cv">
-          <a href={cvLink}>{cvCta}</a>
+
+        <a
+          class="cta skills-container container column center limit-width cv"
+          href={cvLink}>
+          <span>{cvCta}</span>
           <div class="download">
             <svg
               version="1.1"
@@ -74,13 +77,18 @@
 
   .download {
     opacity: 0.1;
-    position: absolute;
+    position: relative;
+    top: -20px;
     width: 15vw;
     pointer-events: none;
   }
 
   .end {
     min-height: 100vh;
+  }
+
+  .cta {
+    font-size: 20px;
   }
 
   .skill-container {
