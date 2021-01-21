@@ -51,5 +51,6 @@ div {
 @media (max-width: 540px) {
     .ty {
         font-size: 20px;
+        text-align: center;
     }
 }
