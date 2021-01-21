@@ -1,7 +1,8 @@
 <script>
+  import BackgroundBroker from "../components/BackgroundBroker.svelte";
+  import { store } from "../lib/Store.svelte";
+
   // export let store;
-  import { store } from "./Store.svelte";
-  import ThreeJsBackground from "./ThreeJSBackground.svelte";
   const { name, title, subtitle, quote, description, lookingFor } = store;
   export let dorkMode;
 </script>
@@ -27,7 +28,7 @@
     </div>
   </div>
   <div class="bg">
-    <ThreeJsBackground {dorkMode} />
+    <BackgroundBroker {dorkMode} />
   </div>
 </div>
 

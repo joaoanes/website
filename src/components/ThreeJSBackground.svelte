@@ -1,9 +1,10 @@
 <script>
   import { afterUpdate } from "svelte";
-  import { createScene, uniforms } from "./scene";
+  import { createScene, uniforms } from "../lib/scene";
   export let dorkMode;
 
   let el;
+
   afterUpdate(() => {
     createScene(el, dorkMode);
   });

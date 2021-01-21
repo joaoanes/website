@@ -1,6 +1,6 @@
 <script>
   import { chunk } from "lodash";
-  import Talk from "./Talk.svelte";
+  import Talk from "../components/Talk.svelte";
   export let store;
   const { talks } = store;
   const { preamble, rest } = talks;

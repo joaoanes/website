@@ -1,5 +1,5 @@
 <script>
-  import GenericSkillsPage from "./genericTwoColumnSelector/GenericSkillsPage.svelte";
+  import GenericSkillsPage from "../components/genericTwoColumnSelector/GenericSkillsPage.svelte";
 
   export let store;
   const { tooling } = store;

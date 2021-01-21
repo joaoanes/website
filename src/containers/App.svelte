@@ -1,5 +1,5 @@
 <script>
-  import { store } from "./Store.svelte";
+  import { store } from "../lib/Store.svelte";
   import Index from "./Index.svelte";
 </script>
 
