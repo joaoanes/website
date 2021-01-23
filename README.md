@@ -1,6 +1,9 @@
 # Personal website
 
 In svelte. Because, why not.
+https://joaoanes.website
+
+(old branch and cv branch available for old site and cv minisite)
 
 # Running
 
