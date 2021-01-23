@@ -1,0 +1,130 @@
+/* NOT to be confused with another css thing */
+
+.align-center {
+  align-items: center;
+}
+
+.left, .right {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 50%;
+  max-width: 50%;
+  display: flex;
+}
+
+.bottom, .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.limit-width {
+  width: 80%;
+  max-width: 500px;
+}
+
+.grow-h-container {
+  /* I have abandoned all hope at this point with names like these */
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-self-start {
+  align-self: flex-start;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.horizontal {
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.page-container {
+  display: flex;
+  height: 80vh;
+}
+
+.linked-ctas {
+  font-size: 50px;
+  margin-bottom: 100px;
+  padding-top: 150px;
+}
+
+@media(max-width:540px) {
+  .left, .right {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .page-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .top, .bottom {
+    flex-direction: column;
+  }
+  .grow-h-container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .left.align-end {
+    align-items: flex-start;
+  }
+  .role {
+    margin-left: 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .linked-ctas {
+    margin-bottom: 20px;
+    font-size: 30px;
+    padding-top: 50px;
+  }
+  .skill-container {
+    margin-bottom: 100px;
+  }
+}
