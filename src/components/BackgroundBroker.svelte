@@ -8,8 +8,8 @@
   onMount(async () => {
     setTimeout(async () => {
       const gpuTier = await getGPUTier();
-      allowed = gpuTier.tier >= 2;
-    }, 1000);
+      allowed = gpuTier.tier >= 1;
+    }, 200);
   });
 </script>
 
