@@ -14,32 +14,32 @@
     skills: [
       [
         {
-          ruby:
-            "Experience with ruby both as a scripting language as well as extensive Rails/ActiveRecord knowledge acquired after maintaining multiple Rails services. Minitest > rspec",
-          "node.js":
-            "Experience with node.js from one-shot scripts to express.js servers with proper testing and support. Used extensively in personal web scraping projects.",
-          elixir:
-            "Experience with elixir as a back-end tool when high throughput and uptime safety is required. I like Ecto and Phoenix. Used significantly in personal projects as GraphQL backend of choice.",
+          Ruby:
+            "Experience with ruby both as a scripting language as well as extensive Rails/ActiveRecord knowledge acquired after maintaining multiple Rails services. Minitest > Rspec.",
+          "Node.js":
+            "Experience with Node.js from one-shot scripts to Express.js servers with proper testing and support. Used extensively in personal web scraping projects.",
+          Elixir:
+            "Experience with Elixir as a back-end tool when high throughput and uptime safety is required. I like Ecto and Phoenix. Used significantly in personal projects as GraphQL backend of choice.",
         },
 
         {
-          docker:
+          Docker:
             "Experience with docker and containerization, mostly as a part of build pipelines. 'It works on my machine' - 'Then we'll ship your machine",
           systemd:
             "Skilled with using systemd to manage services/daemons in linux servers. I cry every time someone reinvents daemons and systemd services (nodemon, for example)",
-          linux:
-            "Extensive experience configuring linux-based servers, with a preference for debian-like environments. Shell script advocate, zsh fan, nginx/caddy experience. I like ubuntu.",
-          postgres:
+          Linux:
+            "Extensive experience configuring Linux-based servers, with a preference for Debian-like environments. Shell script advocate, zsh fan, nginx/caddy experience. I like Ubuntu.",
+          PostgreSQL:
             "Experience with data storage with postgres. Solid PL/SQL knowledge, although it's probably my Achilles' heel.",
         },
       ],
       [
         {
-          "es6 & typescript":
+          "ES6 & Typescript":
             "Proud user and evangelist for ES6 and modern javascript, love [destructuring], imports over requires, arrow functions, functional javascript (lodash-fp is my favourite import). Typescript is great, and the tooling is greater.",
-          "react js":
+          "React.js":
             "Very strong evangelist for React.js as the best and most versatile frontend framework. Champion for functional components, hooks (to promote code reuse and clear splitting of logic/presentation) and higher-order-component composition.",
-          "react native":
+          "React Native":
             "Experience with React Native. Always astonished at how fast it allows webdevs to start doing mobile. Enabled sharing 80/90% code for both iOS and Android releases.",
           "SPA & PWA":
             "Experience with Single Page Apps (SPAs) and Progressive Web Apps (PWAs), as well as Service Workers, HTML5 API functions (notifications, etc) that bridge the gap between native and web app capabilities.",
@@ -55,9 +55,9 @@
       ],
       [
         {
-          terraform:
+          Terraform:
             "Proud advocate for Terraform and strong believer in Infrastructure as Code. Writing down what you want and watch it set itself up is a rush.",
-          "aws experience":
+          "AWS experience":
             "Years experience with AWS. EC2, S3, Route 53, multi-az concerns, VPC configuration, Lambda, API Gateway, ECS",
           "“devops”":
             "Strong believer in “devops” culture. Every engineer should be able to deploy from scratch without outside help.",
@@ -97,7 +97,7 @@
           "Diligently scanned application logs for edge-case users and monitored error reporting to respond to incidents with haste",
           "Performed some regular engineering duties, such as feature planning,  bug-fixing and roadmapping",
           "Assisted team leaders and management with feature proposal, prototyping and roadmapping",
-          "Maintained public developer documentation and example implementation on integration management via gitbooks",
+          "Maintained public developer documentation and example implementation on integration management via Gitbooks",
           "Built training materials for usage with 3+ partner support outsource partners regarding usage, features and quirks of application",
           "Assisted operations teams employing automation to look for sybil attacks after user growth spikes",
         ],
@@ -122,7 +122,7 @@
           "Maintained frontend React codebases with a focus on functional component composability, usage of hooks and code reusability",
           "Directly supported operations team and was point of contact for understanding weird user bug reports and communicating a fix plan",
           "Created and managed core infrastructure nodes running application servers, blockchain services and staging areas via Terraform and Docker",
-          "Built react SPAs backed by rails microservices deployed to AWS Fargate that scaled to 10000+ concurrent users ",
+          "Built react SPAs backed by Rails microservices deployed to AWS Fargate that scaled to 10000+ concurrent users ",
           "Led community outreach, participated in 4+ conferences, managed 10+ summer interns with burocracy, direction and code direction and review",
           "Migrated existing support KYC software to integrate with newly built OAuth system, improving user flow and code maintainability forwards",
         ],
@@ -148,7 +148,7 @@
           "Assisted clients and partners in-situ with product releases, beta flights, brainstorming and design/interaction direction ",
           "Handled client infrastructure hand-offs via AWS and terraform Took ownership of community outreach efforts, actively participating in and sponsoring local events, in order to reach fresh talent",
           "Delivered and maintained 2 user facing and 4 administration-based react frontends with a focus on component-based reusability and composition",
-          "Built and deployed backends in elixir and node.js scaled for 1000+ concurrent users, with extensive testing coverage and contract-based design",
+          "Built and deployed backends in Elixir and Node.js scaled for 1000+ concurrent users, with extensive testing coverage and contract-based design",
           "Explored bleeding-edge tech such as React Native and Ethereum, turning them into delivered products after working closely with clients",
         ],
       },
@@ -206,8 +206,8 @@
               "I keep a quake-like terminal on a system hotkey, since you can solve too many problems with bash scripts and pipes. Can exit from a vim window, and fork bomb your instances.",
             "git & Github":
               "Any VCS system is necessary nowadays, but the simplicity of git's model, workflows like the feature branch PR workflow, and code-review capabilities make git and github my favourite tool to develop software as a team (and by myself).",
-            terraform:
-              'Primary reason why I like "devops" so much. Being able to setup your infrastructure and build/destroy it at will enables powerful things, such as easy personal developer environment setups and easy rollbacks in case of network failure.',
+            Terraform:
+              'Primary reason why I like "devops" so much. Being able to setup your infrastructure and build/destroy it at will enables powerful things, such as easy personal developer environment setups and easy rollbacks in case of network config failure.',
           },
         ],
         [
@@ -223,7 +223,7 @@
             REPLs:
               "The core tool in my programmer arsenal. Having a proper REPL, specially allied to a powerful debugger suite, allows any developer to execute and inspect defects as they happen.",
             AWS:
-              "My favoured cloud provider, specially because of their powerful APIs that enable tools such as terraform to exist and perform so admirably.",
+              "My favoured cloud provider, specially because of their powerful APIs that enable tools such as Terraform to exist and perform so admirably.",
           },
         ],
         [
@@ -312,14 +312,14 @@
             "Backend built with Elixir for scalability and developer experience",
             "GraphQL-based API with mutations for interactibility",
             "SQS-based queues for post submission, categorization, tagging and spider work",
-            "React frontend web app, optimized for media consumption and ",
+            "React frontend web app, optimized for media consumption and long-term storage",
             "Emoji-based reactions and tight, controlled user interaction",
             "Puppeteer-powered cost-effective scraping of multiple websites via AWS Lambda",
             "Heavy use of Node.js for scraping functions",
             "Module-based scraping system that allows for different websites to be scraped in multiple ways",
             "S3-backed file backup for content preservation",
             "Easy share links",
-            "Telegram-based authentication via telegram bot interaction",
+            "Telegram-based authentication via Telegram bot interaction",
             "Future focus on enabling content bots",
           ],
           negs: [
@@ -340,13 +340,13 @@
             "Mobile support via grid system",
             "Internationalization support",
             "Design inspired on existing CV design, adapted to mobile",
-            "Webgl detection and custom shader background animation",
+            "WebGL detection and custom shader background animation",
           ],
           negs: [
             "Svelte isn't nearly as nice as React and I kind of don't like it",
             "CSS mix of component-scoped classes and a home-rolled tailwind-like class system",
             "No tests due to lack of imagination",
-            "I'm sure a svelte dev can look at the code and guess my code heritage",
+            "I'm sure a Svelte dev can look at the code and guess my code heritage",
           ],
           source: "https://github.com/joaoanes/website",
         },
