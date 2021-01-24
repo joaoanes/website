@@ -77,7 +77,7 @@
     cursor: pointer;
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 1280px) {
     img {
       width: 20px;
       height: 20px;

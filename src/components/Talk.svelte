@@ -40,7 +40,7 @@
     min-height: 300px;
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 1280px) {
     .talk-column {
       flex-wrap: wrap;
       margin-bottom: 10px;

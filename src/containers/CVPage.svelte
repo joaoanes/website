@@ -111,7 +111,7 @@
     font-size: 20px;
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 1280px) {
     .skill-container {
       margin-bottom: 20px;
     }

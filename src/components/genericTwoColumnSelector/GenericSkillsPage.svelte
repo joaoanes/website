@@ -49,7 +49,7 @@
     margin-right: 20px;
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 1280px) {
     .skill-column {
       flex-direction: row;
       flex-wrap: wrap;

@@ -120,7 +120,7 @@
     margin-top: 18px;
   }
 
-  @media (max-width: 540px) {
+  @media (max-width: 1280px) {
     .role {
       margin-left: 0;
       line-height: 20px;

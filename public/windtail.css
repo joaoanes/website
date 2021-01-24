@@ -91,7 +91,7 @@
   padding-top: 150px;
 }
 
-@media(max-width:540px) {
+@media(max-width:1280px) {
   .left, .right {
     flex-direction: column;
     width: 100%;
