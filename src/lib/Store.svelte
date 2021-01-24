@@ -15,7 +15,7 @@
       [
         {
           Ruby:
-            "Experience with ruby both as a scripting language as well as extensive Rails/ActiveRecord knowledge acquired after maintaining multiple Rails services. Minitest > Rspec.",
+            "Experience with Ruby both as a scripting language as well as extensive Rails/ActiveRecord knowledge acquired after maintaining multiple Rails services. Minitest > Rspec.",
           "Node.js":
             "Experience with Node.js from one-shot scripts to Express.js servers with proper testing and support. Used extensively in personal web scraping projects.",
           Elixir:
@@ -122,7 +122,7 @@
           "Maintained frontend React codebases with a focus on functional component composability, usage of hooks and code reusability",
           "Directly supported operations team and was point of contact for understanding weird user bug reports and communicating a fix plan",
           "Created and managed core infrastructure nodes running application servers, blockchain services and staging areas via Terraform and Docker",
-          "Built react SPAs backed by Rails microservices deployed to AWS Fargate that scaled to 10000+ concurrent users ",
+          "Built React SPAs backed by Rails microservices deployed to AWS Fargate that scaled to 10000+ concurrent users ",
           "Led community outreach, participated in 4+ conferences, managed 10+ summer interns with burocracy, direction and code direction and review",
           "Migrated existing support KYC software to integrate with newly built OAuth system, improving user flow and code maintainability forwards",
         ],
@@ -147,7 +147,7 @@
           "Introduced tooling such as Github Issues, JIRA/Trello, Asana to partners and mentored them on proper usage and workflows",
           "Assisted clients and partners in-situ with product releases, beta flights, brainstorming and design/interaction direction ",
           "Handled client infrastructure hand-offs via AWS and terraform Took ownership of community outreach efforts, actively participating in and sponsoring local events, in order to reach fresh talent",
-          "Delivered and maintained 2 user facing and 4 administration-based react frontends with a focus on component-based reusability and composition",
+          "Delivered and maintained 2 user facing and 4 administration-based React frontends with a focus on component-based reusability and composition",
           "Built and deployed backends in Elixir and Node.js scaled for 1000+ concurrent users, with extensive testing coverage and contract-based design",
           "Explored bleeding-edge tech such as React Native and Ethereum, turning them into delivered products after working closely with clients",
         ],
@@ -213,7 +213,7 @@
         [
           {
             asdf:
-              "Amazing tool to setup dependencies from yarn to node to erlang and keep them consistent across developer environments.",
+              "Amazing tool to setup dependencies from yarn to Node to erlang and keep them consistent across developer environments.",
             grep:
               "And ack. Find every needle in the haystack and sort it with a single bash line.",
             "CircleCI and CI in general":
