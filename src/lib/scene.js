@@ -16,7 +16,7 @@ const buildScene = () => {
     gridGeometry = new THREE.PlaneGeometry(20, 20, 19, 19);
     camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 1000);
     gridGeometry.vertices = gridGeometry.vertices.map(
-      ({ x, y, z }) => ({ x, y, z: Math.sin(Math.random() * 3.14) + Math.random() })
+      ({ x, y, z }) => ({ x, y, z: Math.random() * 2 })
     )
   }
   camera.position.z = 2.5;
@@ -84,7 +84,14 @@ varying vec3 vCenter;
 void main() {
     vCenter = center;
     gl_Position = projectionMatrix * modelViewMatrix * 
-        vec4(position.x, position.y, position.z + 0.1 + position.z * (sin(position.x + delta / 10.0) / 30.0) , 1.0);
+      vec4(
+        position.x, 
+        position.y, 
+        position.z  
+         + (2.0 * sin(position.x + delta / 10.0) / 30.0) 
+         + (4.0 * cos(position.y + delta / 10.0) / 30.0), 
+        1.0
+      );
 }
 `
 
