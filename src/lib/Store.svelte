@@ -208,6 +208,8 @@
               "Any VCS system is necessary nowadays, but the simplicity of git's model, workflows like the feature branch PR workflow, and code-review capabilities make git and github my favourite tool to develop software as a team (and by myself).",
             Terraform:
               'Primary reason why I like "devops" so much. Being able to setup your infrastructure and build/destroy it at will enables powerful things, such as easy personal developer environment setups and easy rollbacks in case of network config failure.',
+            "ESLint & family":
+              'Developers have much more to bicker about other than spaces vs tabs, bracket positioning and other silly details like it. Just code down how your code should be, as a team, then let the machines handle it on commit and enjoy peace of mind.',
           },
         ],
         [
