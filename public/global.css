@@ -115,6 +115,7 @@ button:hover {
 	margin: 0;
 	padding: 0;
 	text-align: start;
+	cursor: pointer;
 }
 
 .skill-description {
