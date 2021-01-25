@@ -3,6 +3,8 @@
 In svelte. Because, why not.
 https://joaoanes.website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a7286b8-ecb0-438c-94b0-e3d9476bd675/deploy-status)](https://app.netlify.com/sites/tender-kepler-61674c/deploys)
+
 (old branch and cv branch available for old site and cv minisite)
 
 # Running
