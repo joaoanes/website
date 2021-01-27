@@ -179,7 +179,7 @@
           "https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_curso_id=742",
         location: "Porto, PT",
         whatDo:
-          "Graduated 2014 from one of universities with the best IT curriculums available, gaining valuable self-learning and self-direction skills. 15.54 grade average.",
+          "Graduated 2014 with a curriculum that incentivizes self-learning and growth, gaining valuable self-learning and self-direction skills. 15.54 grade average.",
         blurbs: [
           "Served in the University Senate, fighting and achieving results in increasing student-worker rights",
           'Frequent team leader and "fixer" on team projects',
