@@ -3,12 +3,13 @@
   import Header from "./Header.svelte";
   import HistoryPanel from "./HistoryPanel.svelte";
   import SkillPage from "./SkillPage.svelte";
-  import { store } from "../lib/Store.svelte";
   import ToolingPage from "./ToolingPage.svelte";
   import TalksPage from "./TalksPage.svelte";
   import PersonalWorkPage from "./PersonalWorkPage.svelte";
   import InterestsPage from "./InterestsPage.svelte";
   import CvPage from "./CVPage.svelte";
+
+  export let store;
 
   const { history } = store;
   let dorkMode = false;
@@ -22,12 +23,16 @@
       on:click={toggleDorkMode}
       alt={'Toggle dark mode'}
       class="name dork-mode-toggler link with-cursor"
+      width="50"
+      height="50"
       style="display: {dorkMode ? 'block' : 'none'}"
       src="./sun.svg" />
     <img
       on:click={toggleDorkMode}
       alt={'Toggle dark mode'}
       class="name dork-mode-toggler link with-cursor"
+      width="50"
+      height="50"
       style="display: {dorkMode ? 'none' : 'block'}"
       src="./moon.svg" />
   </div>
@@ -36,7 +41,7 @@
 <div class={dorkMode ? 'dork-mode' : ''}>
   <AboveFold {store} {dorkMode} />
 
-  <Header {toggleDorkMode} {dorkMode} />
+  <Header />
 
   <SkillPage {store} />
 

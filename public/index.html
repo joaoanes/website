@@ -42,7 +42,8 @@
 	<link rel="preload" href="/sun.svg" as="image">
 	<link rel="preload" href="/moon.svg" as="image">
 
-	<script defer src='/build/bundle.js'></script>
+	<script type="module" defer src="/build/main.js"></script>
+	<script nomodule defer src="/vendor/dimport-nomodule.js" data-main="/build/nm/main.js"></script>
 </head>
 
 <body>

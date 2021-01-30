@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 export let uniforms = { 'dorkMode': { value: false }, 'delta': { value: 1 } };
 
+import { noise } from "./noise"
+
 //TODO: singletonsssssssssssssssssss
 let scene;
 let renderer;
@@ -10,14 +12,20 @@ let frame
 let gridGeometry
 let camera
 
+let lastDate = Date.now()
+let currentDate = Date.now()
+const animationTime = 5000
+
 const buildScene = () => {
   //TODO: Consider disposing of previous scene
   if (!gridGeometry) {
-    gridGeometry = new THREE.PlaneGeometry(20, 20, 19, 19);
+    gridGeometry = new THREE.PlaneGeometry(20, 20, 20, 20);
     camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.1, 1000);
+
     gridGeometry.vertices = gridGeometry.vertices.map(
-      ({ x, y, z }) => ({ x, y, z: Math.random() * 2 })
+      ({ x, y }) => ({ x, y, z: noise(x, y) * 1.5 })
     )
+
   }
   camera.position.z = 2.5;
   camera.rotation.x = 1.5;
@@ -43,11 +51,10 @@ const buildScene = () => {
 }
 
 const renderLoop = () => {
-  counter = (counter + 1) % 7
-
-  if (counter === 0) {
-    uniforms.delta.value += 1
-  }
+  // since our transforms use sin and cos, this animation loops around at 2pi
+  // the idea is to linearly scale from frametime(start) = 0 to frametime(end aka animatiomTime) = 2pi
+  // this makes the animation independant from the actual fps it's rendering at
+  uniforms.delta.value = ((2 * (Date.now() % animationTime)) * Math.PI) / animationTime
 
   frame = requestAnimationFrame(renderLoop);
   renderer.render(scene, camera);
@@ -87,9 +94,9 @@ void main() {
       vec4(
         position.x, 
         position.y, 
-        position.z  
-         + (2.0 * sin(position.x + delta / 10.0) / 30.0) 
-         + (4.0 * cos(position.y + delta / 10.0) / 30.0), 
+        position.z 
+        + (position.z / 2.0 * sin(position.x + delta)) 
+        + (position.z / 2.0 * cos(position.y + delta)),
         1.0
       );
 }

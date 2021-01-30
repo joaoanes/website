@@ -4,6 +4,7 @@
   import SuperSkillDesc from "../components/genericTwoColumnSelector/ArtSkillDesc.svelte";
 
   export let store;
+
   const { skills } = store;
 </script>
 
@@ -11,5 +12,6 @@
   content={skills}
   id="skills"
   title="Relevant skills"
+  preamble
   SkillButton={SuperSkillButton}
   SkillDesc={SuperSkillDesc} />

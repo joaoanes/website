@@ -4,6 +4,14 @@
   export let id;
 </script>
 
+<!-- TODO -->
+<!-- Without this weird hack, we get a "unexpected slot default" warning-->
+<!-- https://github.com/sveltejs/svelte/issues/4546#issuecomment-749901403 -->
+{#if false}
+  <slot />
+{/if}
+<!-- Way to go, svelte. -->
+
 <div>
   <div class="container column">
     <div class="top justify-start">
