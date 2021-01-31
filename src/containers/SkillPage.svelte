@@ -12,6 +12,6 @@
   content={skills}
   id="skills"
   title="Relevant skills"
-  preamble
+  preamble=""
   SkillButton={SuperSkillButton}
   SkillDesc={SuperSkillDesc} />
