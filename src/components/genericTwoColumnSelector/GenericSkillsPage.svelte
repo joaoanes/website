@@ -1,17 +1,17 @@
 <script>
-  import GenericButton from "./SkillButton.svelte";
-  import GenericDesc from "./SkillDesc.svelte";
-  import TwoColumnContainer from "./TwoColumnContainer.svelte";
+  import GenericButton from "./SkillButton.svelte"
+  import GenericDesc from "./SkillDesc.svelte"
+  import TwoColumnContainer from "./TwoColumnContainer.svelte"
 
-  export let title, content, preamble, id;
-  export let SkillButton = GenericButton;
-  export let SkillDesc = GenericDesc;
+  export let title, content, preamble, id
+  export let SkillButton = GenericButton
+  export let SkillDesc = GenericDesc
 
-  let activeSkill = [null, null];
+  let activeSkill = [null, null]
 
   const setActiveSkill = (skillName, skillWords) => () => {
-    activeSkill = [skillName, skillWords];
-  };
+    activeSkill = [skillName, skillWords]
+  }
 </script>
 
 <TwoColumnContainer {title} {preamble} {id}>
@@ -20,7 +20,8 @@
       <div class="column container skill-column">
         {#each column as skillList}
           {#each Object.keys(skillList) as skill}
-            <SkillButton
+            <svelte:component
+              this={SkillButton}
               {skill}
               {activeSkill}
               onclick={setActiveSkill(skill, skillList[skill])} />
@@ -33,7 +34,7 @@
   <div
     slot="right"
     class="right-container container center skill-description-container">
-    <SkillDesc {activeSkill} />
+    <svelte:component this={SkillDesc} {activeSkill} />
   </div>
 </TwoColumnContainer>
 
