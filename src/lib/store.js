@@ -1,4 +1,4 @@
-<script type="module">
+
   export const store = {
     name: "João Anes",
     title: "Software Engineer",
@@ -385,4 +385,3 @@
     email: "hi@joaoanes.website",
     emailCta: "Drop me an email!",
   }
-</script>
