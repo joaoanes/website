@@ -1,4 +1,4 @@
-<script context="module">
+<script type="module">
   export const store = {
     name: "João Anes",
     title: "Software Engineer",
@@ -338,6 +338,8 @@
           description: "Svelte-based personal website",
           blurbs: [
             "Svelte-powered SPA",
+            "Code-splitting (the code for the fancy background is 70% of the package so)",
+            "100/100/100 Lighthouse score",
             "Fancy backgrounds enabled by three.js and WebGL",
             "Mobile support via grid system",
             "Internationalization support",
@@ -377,7 +379,7 @@
         "Bash scripts",
       ],
     },
-    cvCta: "Download my CV/Resume here in pdf format",
+    cvCta: "Download my CV/Resume here in .pdf format",
     cvLink: "https://cv.joaoanes.website?redir=true",
     endQuote: "Thank you for your time and consideration",
     email: "hi@joaoanes.website",
