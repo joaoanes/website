@@ -1,34 +1,32 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from "svelte"
+  export let history
 
-  // export let store;
-  export let history;
-
-  let shownBlurbs = [];
-  let currentTimeout;
-  let unseenBlurbs = history.blurbs;
+  let shownBlurbs = []
+  let currentTimeout
+  let unseenBlurbs = history.blurbs
 
   function shuffleBlurbs() {
     unseenBlurbs = history.blurbs
       .map((a) => ({ sort: Math.random(), value: a }))
       .sort((a, b) => a.sort - b.sort)
-      .map((a) => a.value);
-    moreBlurbs();
+      .map((a) => a.value)
+    moreBlurbs()
   }
 
   function moreBlurbs() {
     if (unseenBlurbs.length === 0) {
-      unseenBlurbs = null;
-      clearTimeout(currentTimeout);
-      currentTimeout = setTimeout(shuffleBlurbs, 2500);
-      return;
+      unseenBlurbs = null
+      clearTimeout(currentTimeout)
+      currentTimeout = setTimeout(shuffleBlurbs, 2500)
+      return
     }
-    shownBlurbs = unseenBlurbs.splice(0, 4);
+    shownBlurbs = unseenBlurbs.splice(0, 4)
   }
 
   onMount(() => {
-    shuffleBlurbs();
-  });
+    shuffleBlurbs()
+  })
 
   const {
     year,
@@ -38,7 +36,7 @@
     companyLink,
     location,
     whatDo,
-  } = history;
+  } = history
 </script>
 
 <div id={year} class="grow-h-container">

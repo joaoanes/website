@@ -1,7 +1,7 @@
 <script>
-  export let onclick, skill, activeSkill;
+  export let onclick, skill, activeSkill
 
-  const designSkillActive = (skill) => skill === "design principles";
+  const designSkillActive = (skill) => skill === "design principles"
 </script>
 
 <button

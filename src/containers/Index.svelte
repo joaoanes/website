@@ -1,20 +1,20 @@
 <script>
-  import AboveFold from "./AboveFold.svelte";
-  import Header from "./Header.svelte";
-  import HistoryPanel from "./HistoryPanel.svelte";
-  import SkillPage from "./SkillPage.svelte";
-  import ToolingPage from "./ToolingPage.svelte";
-  import TalksPage from "./TalksPage.svelte";
-  import PersonalWorkPage from "./PersonalWorkPage.svelte";
-  import InterestsPage from "./InterestsPage.svelte";
-  import CvPage from "./CVPage.svelte";
+  import AboveFold from "./AboveFold.svelte"
+  import Header from "./Header.svelte"
+  import HistoryPanel from "./HistoryPanel.svelte"
+  import SkillPage from "./SkillPage.svelte"
+  import ToolingPage from "./ToolingPage.svelte"
+  import TalksPage from "./TalksPage.svelte"
+  import PersonalWorkPage from "./PersonalWorkPage.svelte"
+  import InterestsPage from "./InterestsPage.svelte"
+  import CvPage from "./CVPage.svelte"
 
-  export let store;
+  export let store
 
-  const { history } = store;
-  let dorkMode = false;
+  const { history } = store
+  let dorkMode = false
 
-  let toggleDorkMode = () => (dorkMode = !dorkMode);
+  let toggleDorkMode = () => (dorkMode = !dorkMode)
 </script>
 
 <div class="name-container">

@@ -1,16 +1,16 @@
 <script>
   const scrollIntoView = (id) => () =>
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" })
 </script>
 
 <div class="header">
   <div class="left justify-end">
     <div class="container justify-start limit-width center">
-      <a href="/">
-        <div class="name-container">
-          <span class="name link">João Anes</span>
+      <div class="name-container">
+        <div on:click={scrollIntoView('head')} class="name link with-cursor">
+          João Anes
         </div>
-      </a>
+      </div>
     </div>
   </div>
   <div class="right align-center no-cursor">
@@ -58,12 +58,9 @@
     top: 0;
     color: black;
     margin-bottom: 200px;
-    clip-path: polygon(
-      0% 0,
-      100% 0%,
-      100% 100%,
-      0% 100%
-    ); /* I'll give it to them, modern css is pretty great */
+
+    /* I'll give it to them, modern css is pretty great */
+    clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
   }
 
   .name-container {
@@ -92,12 +89,8 @@
 
     .link {
       font-size: 12px;
-      margin-bottom: 5px;
-      margin-right: 10px;
-    }
-
-    .right .link {
       margin-bottom: 8px;
+      margin-right: 10px;
     }
 
     .header .container {
@@ -107,12 +100,6 @@
 
     .header .right {
       margin-bottom: 0px;
-    }
-
-    .header a {
-      font-size: 15px;
-      margin-bottom: 5px;
-      margin-left: 10px;
     }
 
     .left {

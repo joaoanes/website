@@ -1,3 +1,6 @@
 {
-    "svelteSortOrder": "scripts-markup-styles"
+    "svelteSortOrder": "scripts-markup-styles",
+    "semi": false,
+    "single-quote": true,
+    "arrow-parens": "avoid",
 }

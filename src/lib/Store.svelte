@@ -209,7 +209,7 @@
             Terraform:
               'Primary reason why I like "devops" so much. Being able to setup your infrastructure and build/destroy it at will enables powerful things, such as easy personal developer environment setups and easy rollbacks in case of network config failure.',
             "ESLint & family":
-              'Developers have much more to bicker about other than spaces vs tabs, bracket positioning and other silly details like it. Just code down how your code should be, as a team, then let the machines handle it on commit and enjoy peace of mind.',
+              "Developers have much more to bicker about other than spaces vs tabs, bracket positioning and other silly details like it. Just code down how your code should be, as a team, then let the machines handle it on commit and enjoy peace of mind.",
           },
         ],
         [
@@ -382,5 +382,5 @@
     endQuote: "Thank you for your time and consideration",
     email: "hi@joaoanes.website",
     emailCta: "Drop me an email!",
-  };
+  }
 </script>

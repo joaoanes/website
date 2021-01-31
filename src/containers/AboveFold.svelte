@@ -1,10 +1,10 @@
 <script>
-  import BackgroundBroker from "../components/BackgroundBroker.svelte";
-  import { store } from "../lib/Store.svelte";
+  import BackgroundBroker from "../components/BackgroundBroker.svelte"
 
-  // export let store;
-  const { name, title, subtitle, quote, description, lookingFor } = store;
-  export let dorkMode;
+  export let dorkMode
+  export let store
+
+  const { name, title, subtitle, quote, description, lookingFor } = store
 </script>
 
 <div>

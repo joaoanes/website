@@ -1,7 +1,8 @@
 <script>
-  export let store;
-  const { personalWork } = store;
-  const { preamble, rest } = personalWork;
+  export let store
+
+  const { personalWork } = store
+  const { preamble, rest } = personalWork
 </script>
 
 <div class="skill-container">

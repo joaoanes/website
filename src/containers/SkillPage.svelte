@@ -1,11 +1,11 @@
 <script>
-  import GenericSkillsPage from "../components/genericTwoColumnSelector/GenericSkillsPage.svelte";
-  import SuperSkillButton from "../components/genericTwoColumnSelector/ArtSkillButton.svelte";
-  import SuperSkillDesc from "../components/genericTwoColumnSelector/ArtSkillDesc.svelte";
+  import GenericSkillsPage from "../components/genericTwoColumnSelector/GenericSkillsPage.svelte"
+  import SuperSkillButton from "../components/genericTwoColumnSelector/ArtSkillButton.svelte"
+  import SuperSkillDesc from "../components/genericTwoColumnSelector/ArtSkillDesc.svelte"
 
-  export let store;
+  export let store
 
-  const { skills } = store;
+  const { skills } = store
 </script>
 
 <GenericSkillsPage

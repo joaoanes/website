@@ -1,9 +1,11 @@
 <script>
-  import { chunk } from "lodash";
-  import Talk from "../components/Talk.svelte";
-  export let store;
-  const { talks } = store;
-  const { preamble, rest } = talks;
+  import { chunk } from "lodash"
+  import Talk from "../components/Talk.svelte"
+
+  export let store
+
+  const { talks } = store
+  const { preamble, rest } = talks
 </script>
 
 <div class="skill-container">
