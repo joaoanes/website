@@ -3,7 +3,7 @@
 	src: url('/fonts/subset-SourceSansPro-ExtraLight.woff2') format('woff2'), url('/fonts/subset-SourceSansPro-ExtraLight.woff') format('woff');
 	font-weight: 200;
 	font-style: normal;
-	font-display: swap;
+	font-display: fallback;
 }
 
 @font-face {
@@ -11,7 +11,7 @@
 	src: url('/fonts/subset-Exo2-ExtraLightItalic.woff2') format('woff2'), url('/fonts/subset-Exo2-ExtraLightItalic.woff') format('woff');
 	font-weight: 200;
 	font-style: italic;
-	font-display: swap;
+	font-display: fallback;
 }
 
 @font-face {
@@ -19,7 +19,7 @@
 	src: url('/fonts/subset-CascadiaCode-Regular.woff2') format('woff2'), url('/fonts/subset-CascadiaCode-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-	font-display: swap;
+	font-display: fallback;
 }
 
 html, body {
