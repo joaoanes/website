@@ -1,0 +1,251 @@
+@font-face {
+	font-family: 'SourceSansLight';
+	src: url('/fonts/subset-SourceSansPro-ExtraLight.woff2') format('woff2'), url('/fonts/subset-SourceSansPro-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'Exo2Italic';
+	src: url('/fonts/subset-Exo2-ExtraLightItalic.woff2') format('woff2'), url('/fonts/subset-Exo2-ExtraLightItalic.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: 'CascadiaCode';
+	src: url('/fonts/subset-CascadiaCode-Regular.woff2') format('woff2'), url('/fonts/subset-CascadiaCode-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: black;
+	margin: 0;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "CascadiaCode", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.divider {
+	height: 2px;
+	width: 100%;
+	background-color: black;
+	margin-top: 40px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: black;
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+	border: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+button:hover {
+	background-color: #D4D4D4;
+}
+
+.history-divider {
+	height: 2px;
+	width: 90%;
+	background-color: black;
+	margin-bottom: 50px;
+	margin-top: 18px;
+}
+
+.skill-description-container {
+	min-height: 200px;
+}
+
+.skill-column {
+	margin-right: 20px;
+}
+
+.skill {
+	margin: 0;
+	padding: 0;
+	text-align: start;
+	cursor: pointer;
+}
+
+.skill-description {
+	font-family: "Exo2Italic";
+	font-size: 24px;
+}
+
+.art {
+	font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Comic Neue", sans-serif;
+}
+
+.no-skill {
+	color: #afafaf;
+	font-family: "Exo2Italic";
+}
+
+.selected {
+	background-color: #d4d4d4;
+}
+
+.easter-egg {
+	position: absolute;
+}
+
+.frog {
+	max-width: 500px;
+}
+
+.hilarious-misalign {
+	transform: translateY(-140px) translateX(-130px);
+}
+
+@media (max-width: 1280px) {
+	.header .link, a {
+		text-decoration: underline;
+	}
+	.skill-column {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 10px;
+	}
+	.skill {
+		padding: 2px;
+		margin-left: 10px;
+		margin-right: 10px;
+		text-align: center;
+	}
+	.skill-description {
+		font-size: 20px;
+	}
+	.skill-container {
+		margin-bottom: 20px;
+	}
+	.hilarious-misalign {
+		transform: initial;
+	}
+	.frog {
+		width: 50vh;
+	}
+	.header .left {
+		width: 40%
+	}
+	.header .right {
+		width: 60%
+	}
+	.description {
+		display: flex;
+		flex-direction: column;
+		margin: 0
+	}
+}
+
+.header {
+	background-color: rgba(255, 255, 255, 0.98);
+	border-bottom: 1px solid black;
+}
+
+.no-cursor {
+	pointer-events: none;
+}
+
+.with-cursor {
+	pointer-events: all;
+}
+
+.dork-mode * {
+	color: white;
+}
+
+.dork-mode {
+	color: white;
+	background-color: black;
+}
+
+.dork-mode .history-divider {
+	background-color: white;
+}
+
+.dork-mode .divider {
+	background-color: white;
+}
+
+.dork-mode .header {
+	background-color: black;
+	border-bottom: 2px solid white;
+}
+
+.dork-mode .skill {
+	color: black;
+}
+
+.dork-mode .more-button {
+	color: black;
+}
+
+.dork-mode .download svg {
+	fill: white;
+}
+
+.dork-mode a {
+	color: white;
+}
+
+.dork-mode .header {
+	border-bottom: 1px solid white;
+}
+
+.dork-mode .neg {
+	color: rgb(245, 195, 196);
+}
