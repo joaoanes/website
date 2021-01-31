@@ -1,18 +1,24 @@
 @font-face {
-	font-family: 'CascadiaCode';
-	src: url('./CascadiaCode.woff2');
+	font-family: 'SourceSansLight';
+	src: url('/fonts/subset-SourceSansPro-ExtraLight.woff2') format('woff2'), url('/fonts/subset-SourceSansPro-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
 	font-family: 'Exo2Italic';
-	src: url('./Exo2-ExtraLightItalic.ttf');
+	src: url('/fonts/subset-Exo2-ExtraLightItalic.woff2') format('woff2'), url('/fonts/subset-Exo2-ExtraLightItalic.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'SourceSansLight';
-	src: url('./SourceSansPro-ExtraLight.ttf');
+	font-family: 'CascadiaCode';
+	src: url('/fonts/subset-CascadiaCode-Regular.woff2') format('woff2'), url('/fonts/subset-CascadiaCode-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 	font-display: swap;
 }
 
