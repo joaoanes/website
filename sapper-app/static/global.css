@@ -249,3 +249,8 @@ button:hover {
 .dork-mode .neg {
 	color: rgb(245, 195, 196);
 }
+
+.dork-mode div.loader, .dork-mode div.loader::before, .dork-mode div.loader::after {
+	color: white;
+	background: black;
+}
