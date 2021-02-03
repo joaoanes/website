@@ -11,4 +11,4 @@ https://joaoanes.website
 
 `yarn dev` to spin up a webserver at localhost:5000
 
-`yarn build` to do svelte things that pump out a website.
+`yarn build` to do svelte things that pump out a website. HOWEVER, the `sapper-app` directory includes a templated [sapper](https://sapper.svelte.dev/) app that `yarn export`s something much better.

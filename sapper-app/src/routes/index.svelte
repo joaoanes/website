@@ -1,7 +1,5 @@
 <script>
-  import Index from "../../../src/containers/Index.svelte"
-
-  import { store } from "../../../src/lib/store"
+  import App from "../../../src/containers/App.svelte"
 </script>
 
-<Index {store} />
+<App />

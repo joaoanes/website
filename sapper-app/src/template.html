@@ -32,11 +32,6 @@
 
 	%sapper.base%
 
-	<link rel="stylesheet" href="global.css">
-	<link rel="stylesheet" href="windtail.css">
-
-	<link rel='preload' href='/global.css' as='style'>
-	<link rel='preload' href='/windtail.css' as='style'>
 	<link rel='preload' href='/fonts/subset-CascadiaCode-Regular.woff2' as='font' crossorigin>
 	<link rel='preload' href='/fonts/subset-Exo2-ExtraLightItalic.woff2' as='font' crossorigin>
 
@@ -47,24 +42,12 @@
 	<link rel="preload" href="/sun.svg" as="image">
 	<link rel="preload" href="/moon.svg" as="image">
 
-	<!-- Sapper creates a <script> tag containing `src/client.js`
-	     and anything else it needs to hydrate the app and
-	     initialise the router -->
 	%sapper.scripts%
-
-	<!-- Sapper generates a <style> tag containing critical CSS
-	     for the current page. CSS for the rest of the app is
-	     lazily loaded when it precaches secondary pages -->
 	%sapper.styles%
-
-	<!-- This contains the contents of the <svelte:head> component, if
-	     the current page has one -->
 	%sapper.head%
 </head>
 
 <body>
-	<!-- The application will be rendered inside this element,
-	     because `src/client.js` references it -->
 	<div id="sapper">%sapper.html%</div>
 </body>
 
