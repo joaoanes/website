@@ -1,4 +1,5 @@
 import { timestamp, files, shell } from '@sapper/service-worker';
+import { filter } from 'lodash'
 
 const ASSETS = `cache${timestamp}`;
 
@@ -9,7 +10,7 @@ const staticAssets = new Set(to_cache);
 
 self.addEventListener('install', event => {
 	event.waitUntil(
-		caches
+		filter(caches, (v) => v !== "/.keep")
 			.open(ASSETS)
 			.then(cache => cache.addAll(to_cache))
 			.then(() => {

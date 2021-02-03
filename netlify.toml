@@ -11,5 +11,5 @@
   publish = "/__sapper__/export"
 
   # Default build command.
-  command = "yarn; cd ..; yarn; cd sapper-app; npx sapper export"
+  command = "yarn; cd ..; yarn; cd sapper-app; yarn export"
 
