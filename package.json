@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "detect-gpu": "^3.0.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "sirv-cli": "^1.0.0",
     "three": "^0.124.0"
   }
