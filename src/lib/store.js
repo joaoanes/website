@@ -1,41 +1,46 @@
-
 export const store = {
   name: "João Anes",
-  title: "Software Engineer",
+  title: "Principal Full-Stack Software Engineer",
   subtitle:
-    `${new Date().getFullYear() - 2014} years experience in product vision implementation, software engineering, client and end-user management, process refinement, technical leadership and incident response`,
+    `${new Date().getFullYear() - 2014} years experience in product vision implementation, software engineering, client and end-user management, process refinement, technical leadership, incident response and, increasingly, AI-assisted software engineering`,
   quote:
     "Computers are hard. Let me make them slightly easier for you to deal with.",
   description: [
     "Effective communicator, full-stack integrator, vision-focused and customer-oriented leader, with a feather touch.",
+    "Lately spending a lot of time making AI useful for software engineering: building agent systems, migration harnesses, memory and knowledge systems, eval tooling and the practices around using all of that without making a mess.",
     "Firm believer in strong teams that own their features.",
   ],
-  lookingFor: "Looking for staff, senior development and/or product-oriented roles.",
+  lookingFor:
+    "Currently focused on AI engineering, developer enablement and the increasingly blurry line between writing software and building the machinery that writes software.",
   skills: [
     [
       {
         Ruby:
           "Experience with Ruby both as a scripting language as well as extensive Rails/ActiveRecord knowledge acquired after maintaining multiple Rails services. Minitest > Rspec.",
         "Node.js":
-          "Experience with Node.js from one-shot scripts to Next.js webapps with proper testing and support. Used extensively in personal web scraping projects and as glue code for when bash can't cut it.",
+          "Experience with Node.js from one-shot scripts to Next.js webapps with proper testing and support. Used extensively in personal web scraping projects, internal tooling, AI tooling and as glue code for when bash can't cut it.",
         Elixir:
           "Experience with Elixir as a back-end tool when high throughput and uptime safety is required. Phoenix LiveView is a great alternative to the modern frontend malaises. Used significantly in personal projects as GraphQL backend of choice.",
+        Java:
+          "Experience working in and around large Java codebases, including architecture, maintenance and migration work. Turns out enterprise Java is much less scary after you've seen enough other people's production systems.",
       },
       {
         Docker:
-          "Experience with docker, image building, containerization, and debugging build pipelines. 'It works on my machine' - 'Then we'll ship your machine, here's a dockerfile.",
+          "Experience with docker, image building, containerization, and debugging build pipelines. 'It works on my machine' - 'Then we'll ship your machine, here's a dockerfile.'",
         "POSIX Bash":
           "Maintained and built bash cathedrals and trash fires alike. Will write bash scripts for automation if let run amok and will install oh-my-zsh on your whole team's machines.",
         Terraform:
-          "Extensive experience configuring Linux-based servers, with a preference for Debian-like environments. Shell script advocate, nginx/caddy experience. Everything is a provider!",
+          "Extensive experience configuring Linux-based servers and cloud infrastructure, with a preference for reproducible environments. Everything is a provider!",
         Kubernetes:
-          "Experience with managing and managing K8s clusters and deployment pipelines, tuning of kubernetes monitors, and autoscaling. Once added an ssh server to a cluster just to ssh local port forward to another network!",
+          "Experience with managing K8s clusters and deployment pipelines, tuning kubernetes monitors, and autoscaling. Once added an ssh server to a cluster just to ssh local port forward to another network!",
       },
     ],
     [
       {
         Mentorship:
-          "Believer that companies and teams grow exponentially with the growth of its individual elements, and doer by 1:1 mentorship, strong, concise code reviews and plenty of appreciation. Plus, I only know what I know because someone told me once - need to pay it forward!"
+          "Believer that companies and teams grow exponentially with the growth of its individual elements, and doer by 1:1 mentorship, strong, concise code reviews and plenty of appreciation. Plus, I only know what I know because someone told me once - need to pay it forward!",
+        "AI coaching":
+          "Help engineers use AI without handing their judgement over to it. Workshops, pairing, practical workflow changes, plenty of failure modes and a strong preference for people understanding why something works before turning it into process.",
       },
       {
         "Tech leadership":
@@ -46,13 +51,12 @@ export const store = {
           "Experience with coordinating release features with stakeholders, from task assignment, to acceptance criteria, to managing the technicalities of deployment procedures and keeping the team on a cycle.",
       },
       {
-        "Typescript":
-          "Proud user and evangelist for typescripts, love [destructuring], imports over requires, arrow functions, functional javascript (lodash-fp is my favourite import). Types aren't just important, they're a cornerstone.",
+        Typescript:
+          "Proud user and evangelist for typescript, love destructuring, imports over requires, arrow functions, functional javascript and proper types. Types aren't just important, they're a cornerstone.",
         "React.js":
-          "Very strong evangelist for React.js as the best and most versatile frontend framework. Champion for functional components, hooks (to promote code reuse and clear splitting of logic/presentation) and higher-order-component composition.",
+          "Very strong evangelist for React.js as the best and most versatile frontend framework. Champion for functional components, hooks and higher-order-component composition.",
         "REST/gql":
           "Experience with REST/HATEOAS applications, self-describing APIs. Proud evangelist of GraphQL if performance isn't a massive concern.",
-
       },
     ],
     [
@@ -61,27 +65,74 @@ export const store = {
           "Experience and steward of ensuring as much information possible is logged in order to understand unexpected behaviour and to properly categorize user metrics. Log levels are great.",
         "Metrics [& monitoring]":
           "From database load to average query resolution times, these numbers drive user experience. Keeping track of them is core if you care about your product. Dashboard maniac.",
+        "Evals [& verification]":
+          "Built evaluation and verification tooling for AI systems because 'looks good to me' is not a quality strategy. Regression tests for probabilistic software are weird, but still very much worth doing.",
       },
-
       {
         "AWS cloud":
-          "Years experience with AWS. EC2, S3, Route 53, multi-az concerns, VPC configuration, Lambda, API Gateway, ECS, EKS, IAM",
-        "devops":
-          "Strong believer in “devops” culture, starting with every dev and ending with all the ops. Every engineer should be able to deploy from scratch without outside help.",
+          "Years experience with AWS. EC2, S3, Route 53, multi-az concerns, VPC configuration, Lambda, API Gateway, ECS, EKS, IAM, EventBridge and whatever service has appeared since I last updated this sentence.",
+        devops:
+          "Strong believer in 'devops' culture, starting with every dev and ending with all the ops. Every engineer should be able to deploy from scratch without outside help.",
+        "Agentic systems":
+          "Built agents that do more than answer questions: tool use, persistent sessions, memory, workflow execution, migration work, knowledge access and other ways of letting a model actually operate on a software system instead of merely talking about it.",
       },
-
       {
         "CI [& automation]":
           "Champion for automation whenever possible. The true job of the IT worker is to use technology to solve problems at scale - automation and being able to automate business processes is our key contribution to the business.",
-        "design principles": "papyrus or comic sans? graphics design is my passion"
+        "Context, memory [& knowledge]":
+          "Built systems around getting the right information to models at the right time, keeping useful state around, tracing where knowledge came from and turning piles of documentation into something both humans and agents can actually work with.",
+        "design principles":
+          "papyrus or comic sans? graphics design is my passion",
       },
     ],
   ],
   history: [
     {
-      role: "Tech Lead",
-      date: "2021",
+      role: "Principal Software Engineer - AI Engineering & Enablement",
+      date: "2025-present",
       current: true,
+      companyName: "Mindera",
+      companyLink: "https://mindera.com",
+      location: "Porto, PT / International",
+      whatDo:
+        "Working across AI engineering, software development, coaching and internal platform work. Building practical systems around agents and LLMs while helping teams figure out how these tools fit into actual engineering without dropping all the boring-but-important parts.",
+      blurbs: [
+        "Built one-run agent harnesses for large-scale software migration and modernisation work, including moving ancient systems into something maintainable and moving perfectly serviceable systems into Java",
+        "Built persistent memory systems for agents and longer-running engineering work",
+        "Built eval tooling and quality gates to measure and compare model and agent behaviour",
+        "Built chatbot-style agents with adaptive user interfaces that change according to context and task",
+        "Built knowledge bases and knowledge engines around organisational and software-system information",
+        "Designed systems for tracing documentation, implementation, requirements and other sources of truth back to each other",
+        "Built reusable tooling and execution environments for agents doing software engineering work",
+        "Worked on ways of giving agents enough context to operate effectively without throwing the entire company wiki into a prompt and hoping for the best",
+        "Applied AI to software discovery, migration, implementation, testing, review and documentation rather than treating code generation as the whole problem",
+        "Coached engineers and teams on practical AI-assisted software development, from basic usage through to agentic workflows",
+        "Designed and delivered workshops on AI-assisted software engineering, its failure modes and how the role of the engineer changes as the tools become more capable",
+        "Worked with technical leadership on AI adoption, engineering practice and how to introduce these systems without producing an exciting new category of technical debt",
+        "Continued doing ordinary software engineering throughout, because the agents still need something real to work on",
+      ],
+    },
+    {
+      role: "Senior Software Engineer - Embedded Client Team",
+      date: "2023-2025",
+      companyName: "Mindera",
+      companyLink: "https://mindera.com",
+      location: "Porto, PT / UK",
+      whatDo:
+        "Fully embedded in a client warehousing team for around two years, working on support systems, automation and event-driven services while helping the team deliver and improve its engineering practices.",
+      blurbs: [
+        "Helped build support systems around warehouse returns using AWS Lambda, EventBridge and an event-driven architecture",
+        "Assisted with architecture of connected Lambda-based systems and the boundaries between the services involved",
+        "Built automation around operational processes that otherwise needed to be handled manually",
+        "Supported teammates heavily around test automation, debugging and general technical upskilling",
+        "Supported the final stages of a years-long migration that predated my joining",
+        "Tutored at Mindera School on Git and DevOps fundamentals",
+        "Adapted an open-source project into a custom gamified Git playground and created teaching material around it",
+      ],
+    },
+    {
+      role: "Tech Lead",
+      date: "2021-2023",
       companyName: "Applied Blockchain Ltd",
       companyLink: "https://appliedblockchain.com",
       location: "Porto, PT / London, UK",
@@ -310,6 +361,27 @@ export const store = {
       "I sometimes develop software for fun. Here's a couple of good examples.",
     rest: [
       {
+        name: "palchemy.club",
+        description:
+          "Palworld breeding solver powered by Prolog in your browser, because apparently that was a reasonable idea",
+        blurbs: [
+          "Used GPT-4 extensively to help build a non-trivial Prolog application despite having last seriously touched Prolog at university",
+          "A*-based breeding solver that works backwards from the Pal you want to breeding trees made from Pals you actually own",
+          "Ships an entire SWI-Prolog WASM machine to the browser to run the algorithm client-side",
+          "Reads real Palworld save files and extracts the player's boxes instead of making people type their collection in manually",
+          "AWS serverless save-processing pipeline involving S3 events, container Lambdas and an entirely reasonable 8GB Lambda",
+          "React frontend with animated day/night scenery, parallax, page transitions and far too much polish for a breeding calculator",
+          "Search progress includes useful technical diagnostics like 'Reticulating Splines' and 'Putting coal in the Algorithm™'",
+          "Features shittyPollerBecauseWebsocketsAreExpensive, which does exactly what it says on the tin",
+        ],
+        negs: [
+          "Ships an entire SWI-Prolog WASM machine to the browser to run the algorithm client-side",
+          "The save parser gets 8GB of RAM",
+          "This was supposed to be a breeding calculator",
+        ],
+        source: "https://palchemy.club/",
+      },
+      {
         name: "raid.network",
         description:
           "Elixir-powered PWA to help Pokemon Go players find other players",
@@ -392,7 +464,11 @@ export const store = {
     rest: [
       "Full-stack development",
       "Mentoring in software",
-      "ML-powered code creation and analysis",
+      "AI-assisted software development",
+      "Agentic software engineering",
+      "Context and memory systems",
+      "Model and agent evaluation",
+      "Knowledge systems",
       "Team management",
       "Release Planning and Management",
       "(useful) Agile methodologies",
@@ -403,12 +479,11 @@ export const store = {
       "User metrics research",
       "Product vision workmapping",
       "Gaming",
-      "AI (in the \"classic\" 198ies sense)",
+      'AI (in the "classic" 198ies sense)',
       "MLOps",
       "Culture sharing",
       "Fusion food",
       "Performance analysis",
-      "ML-powered full-stack content creation",
       "Online community cultures",
       "Media preservation",
       "Event based architectures",
@@ -421,4 +496,4 @@ export const store = {
   endQuote: "Thank you for your time and consideration",
   email: "hi@joaoanes.website",
   emailCta: "Drop me an email!",
-}
+};
