@@ -38,6 +38,7 @@ export default [
       dir: 'public/build/nm/'
     },
     plugins: [
+      css(),
       svelte({
         emitCss: false,
         compilerOptions: {

@@ -38,28 +38,32 @@
     location,
     whatDo,
   } = history
+
+  const roleParts = role.split(" - ")
+  const mainRole = roleParts[0]
+  const subRole = roleParts.length > 1 ? roleParts.slice(1).join(" - ") : null
 </script>
 
 <div id={year} class="grow-h-container">
   <div class="history-container align-center">
     <div class="top">
-      <div class="left flex align-end limit-width center">
+      <div class="left flex align-end">
         <div class="current-container">
-        <span class="role">{role}</span>
-        {#if current}
-          <span class="current">(current)</span>
-        {/if}
+          <span class="role">{mainRole}</span>
+          {#if subRole}
+            <span class="role-subtitle"> - {subRole}</span>
+          {/if}
+          {#if current}
+            <span class="current">(current)</span>
+          {/if}
         </div>
-          <span class="date">{date}</span>
-        
+        <span class="date">{date}</span>
       </div>
-      <div
-        class="right container horizontal align-start limit-width center
-          justify-end">
-        <div class="top">
+      <div class="right-info">
+        <div>
           <a href={companyLink}> <span class="company">{companyName}</span> </a>
         </div>
-        <div class="bottom"><span class="location">{location}</span></div>
+        <div><span class="location">{location}</span></div>
       </div>
     </div>
     <div class="history-divider center" />
@@ -85,9 +89,16 @@
 </div>
 
 <style>
+  .current-container {
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+  }
+
   .current {
     font-size: 12px;
-    line-height: 28px;
+    line-height: 1.1;
+    margin-left: 6px;
   }
 
   .endzone {
@@ -99,7 +110,10 @@
   }
 
   .history-container {
-    width: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
   }
 
@@ -113,28 +127,71 @@
   }
 
   .role {
-    font-size: 40px;
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .role-subtitle {
+    font-size: 22px;
+    font-family: "Exo2Italic";
+    font-style: italic;
+    line-height: 1.1;
+  }
+
+  .history-container .top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .history-container .top .left {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .history-container .top .right-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: auto;
+    max-width: none;
+    margin-left: 20px;
+    flex-shrink: 0;
   }
 
   .date {
-    font-size: 27px;
-    line-height: 40px;
-    margin-left: 20px;
-    margin-right: 0;
+    font-size: 24px;
+    line-height: 1.1;
     margin-left: auto;
+    margin-right: 0;
+    white-space: nowrap;
   }
 
   .history-divider {
     height: 2px;
-    width: 90%;
+    width: 100%;
     background-color: black;
     margin-bottom: 50px;
     margin-top: 18px;
   }
 
   @media (max-width: 1280px) {
+    .current-container {
+      flex-wrap: wrap;
+      white-space: normal;
+    }
+
     .date {
       line-height: 20px;
+      margin-left: 0;
     }
 
     .history-divider {
@@ -144,14 +201,29 @@
     }
 
     .role {
-      font-size: 25px;
+      font-size: 24px;
+    }
+
+    .role-subtitle {
+      font-size: 16px;
+    }
+
+    .history-container .top .left {
+      max-width: 100%;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .history-container .top .right-info {
+      align-items: flex-start;
+      margin-left: 0;
     }
 
     .date {
       font-size: 20px;
       display: flex;
       margin-right: 0;
-      margin-left: auto;
     }
 
     .what-do {
