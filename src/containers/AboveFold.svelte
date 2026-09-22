@@ -77,16 +77,12 @@
       <div class="name-container limit-width">
         <span class="quote">{quote}</span>
         <div class="description">
-          {#each description as desc}<span>{desc}</span>{/each}
+          {#each description as desc}<span>{desc} </span>{/each}
         </div>
         <span class="lookingFor">{lookingFor}</span>
       </div>
     </div>
   </div>
-
-  {#if broken}
-    <div class="scanlines" aria-hidden="true"><div class="beam" /></div>
-  {/if}
 
   <div class="bg" style="bottom: {-overhang}px">
     <BackgroundBroker
@@ -94,6 +90,14 @@
       {surface}
       host={fold}
       opacityOverride={tuning ? tunedOpacity : null} />
+
+    <!-- Inside the background, not beside it. The scanlines are an overlay on the shader
+         surface, so making them a child means they take its box by construction — however
+         far it is extended, they extend with it. As a sibling they carried their own
+         inset: 0 and silently stayed pinned to the fold when the surface grew. -->
+    {#if broken}
+      <div class="scanlines" aria-hidden="true"><div class="beam" /></div>
+    {/if}
   </div>
 </div>
 
@@ -200,11 +204,13 @@
   }
 
   /* Only mounted while the surface is failing. A full-bleed blended layer left animating
-     at zero opacity costs a composite every frame for nothing. */
+     at zero opacity costs a composite every frame for nothing.
+     inset: 0 now resolves against .bg, so this tracks the shader surface exactly; it
+     paints over the canvas by DOM order and stays under the copy because .bg sits below
+     .above-fold. */
   .scanlines {
     position: absolute;
     inset: 0;
-    z-index: 50;
     pointer-events: none;
     overflow: hidden;
     background: repeating-linear-gradient(

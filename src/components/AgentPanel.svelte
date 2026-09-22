@@ -39,11 +39,16 @@
       </div>
     {/if}
 
-    <div class="prompt">
-      <span class="mark">&gt;</span>
-      <span class="typed">{typed}</span>
-      {#if caretVisible}<span class="caret" />{/if}
-    </div>
+    <!-- Once the fix lands, typed is cleared and the caret hides, which left this
+         rendering a bare prompt marker over an empty line. Costly on a phone, where the
+         panel is already most of the screen. -->
+    {#if typed || caretVisible}
+      <div class="prompt">
+        <span class="mark">&gt;</span>
+        <span class="typed">{typed}</span>
+        {#if caretVisible}<span class="caret" />{/if}
+      </div>
+    {/if}
 
     <button class="skip" type="button" on:click={onSkip}>
       <span>once per session</span>
@@ -236,10 +241,38 @@
     }
   }
 
+  /* On a phone the card is only ~358px wide, so desktop type wrapped almost every log
+     line and the panel grew to nearly half the screen. Smaller type and tighter padding
+     keep it a panel rather than a takeover. */
   @media (max-width: 720px) {
     .panel {
       right: 12px;
       bottom: 12px;
+    }
+
+    .frame {
+      font-size: 10.5px;
+      line-height: 1.45;
+    }
+
+    .titlebar,
+    .log,
+    .prompt {
+      padding: 7px 9px;
+    }
+
+    .log {
+      min-height: 0;
+    }
+
+    .diff {
+      padding: 6px 9px;
+      font-size: 9px;
+    }
+
+    .skip {
+      padding: 6px 9px;
+      font-size: 9px;
     }
   }
 </style>
