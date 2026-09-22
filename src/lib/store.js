@@ -1,16 +1,16 @@
-
 export const store = {
   name: "João Anes",
   title: "Software Engineer",
   subtitle:
-    `${new Date().getFullYear() - 2014} years experience in product vision implementation, software engineering, client and end-user management, process refinement, technical leadership and incident response`,
+    `${new Date().getFullYear() - 2014} years experience in product vision implementation, software engineering, client and end-user management, process refinement, technical leadership, incident response and AI engineering`,
   quote:
     "Computers are hard. Let me make them slightly easier for you to deal with.",
   description: [
     "Effective communicator, full-stack integrator, vision-focused and customer-oriented leader, with a feather touch.",
-    "Firm believer in strong teams that own their features.",
+    "Firm believer in strong teams that own their features, and building the machinery that lets those teams use AI without torching the place.",
   ],
-  lookingFor: "Looking for staff, senior development and/or product-oriented roles.",
+  lookingFor:
+    "Currently working across full-stack engineering, AI engineering and developer enablement.",
   skills: [
     [
       {
@@ -35,7 +35,9 @@ export const store = {
     [
       {
         Mentorship:
-          "Believer that companies and teams grow exponentially with the growth of its individual elements, and doer by 1:1 mentorship, strong, concise code reviews and plenty of appreciation. Plus, I only know what I know because someone told me once - need to pay it forward!"
+          "Believer that companies and teams grow exponentially with the growth of its individual elements, and doer by 1:1 mentorship, strong, concise code reviews and plenty of appreciation. Plus, I only know what I know because someone told me once - need to pay it forward!",
+        "AI coaching":
+          "Coach engineers on using AI in actual software work, from first contact to agentic workflows. Strong believer that making people faster is useless if they stop knowing what the machine is doing.",
       },
       {
         "Tech leadership":
@@ -52,7 +54,6 @@ export const store = {
           "Very strong evangelist for React.js as the best and most versatile frontend framework. Champion for functional components, hooks (to promote code reuse and clear splitting of logic/presentation) and higher-order-component composition.",
         "REST/gql":
           "Experience with REST/HATEOAS applications, self-describing APIs. Proud evangelist of GraphQL if performance isn't a massive concern.",
-
       },
     ],
     [
@@ -62,26 +63,81 @@ export const store = {
         "Metrics [& monitoring]":
           "From database load to average query resolution times, these numbers drive user experience. Keeping track of them is core if you care about your product. Dashboard maniac.",
       },
-
       {
         "AWS cloud":
-          "Years experience with AWS. EC2, S3, Route 53, multi-az concerns, VPC configuration, Lambda, API Gateway, ECS, EKS, IAM",
+          "Years experience with AWS. EC2, S3, Route 53, multi-az concerns, VPC configuration, Lambda, API Gateway, ECS, EKS, IAM, EventBridge.",
         "devops":
           "Strong believer in “devops” culture, starting with every dev and ending with all the ops. Every engineer should be able to deploy from scratch without outside help.",
       },
-
+      {
+        "Agentic systems":
+          "Built agents that use tools, keep state and actually do work on software systems. Very interested in making them useful past the point where 'just ask the model' stops working.",
+        "Harness engineering":
+          "Interested in and built custom harnesses and platforms for managing agentic workloads (pipelines, workflows, etc). Lots of opinions on memory systems and proper orchestration management. Teams should own their crucible.",
+        "Knowledge systems":
+          "Active research interest in building systems that store and sync knowledge, and use agentic workflows to manage, query and use that knowledge productively through agentic workflows."
+      },
       {
         "CI [& automation]":
           "Champion for automation whenever possible. The true job of the IT worker is to use technology to solve problems at scale - automation and being able to automate business processes is our key contribution to the business.",
-        "design principles": "papyrus or comic sans? graphics design is my passion"
+        "Context, memory [& knowledge]":
+          "Built memory systems, knowledge bases, knowledge engines and context tooling for agents. Getting the right information into the machine is usually more interesting than asking it nicely.",
+        "design principles":
+          "papyrus or comic sans? graphics design is my passion",
       },
     ],
   ],
   history: [
     {
+      role: "Staff AI Engineer",
+      subtitle: "Agentic Platform Engineering & Developer Enablement",
+      date: "2025",
+      current: true,
+      companyName: "Mindera",
+      companyLink: "https://mindera.com",
+      location: "Porto, PT / International",
+      whatDo:
+        "Part of the Mindera AI Horizontal, thinking about AI in the SDLC, building tools and processes to support it, and coaching teams on responsible, disciplined and effective AI usage.",
+      blurbs: [
+        "Built one-run agent harnesses for large software migration and modernisation work, including legacy migrations and migrations into Java",
+        "Researched persistent memory systems for agents and longer-running engineering work",
+        "Investigated and implemented eval tooling and quality gates to compare model and agent behaviour without relying exclusively on vibes",
+        "Deployed chatbot-style agents with adaptive user interfaces that change according to context and task",
+        "Researched knowledge bases and knowledge engines around organisational and software-system information",
+        "Implemented from research a bleeding-edge graph-based documentation tracing systems connecting software codebases and their supporting knowledge",
+        "Built reusable tooling and execution environments for agents doing software engineering work",
+        "Worked on context systems to give agents enough information to operate effectively without stuffing the whole company into a prompt",
+        "Applied AI to software discovery, migration, implementation, testing, review and documentation instead of stopping at code generation",
+        "Coached engineers and teams on practical AI-assisted development, from basic usage through to agentic workflows",
+        "Investigated (by hitting my forehead repeatedly) the failure states of AI tools and how to mitigate them",
+        "Designed and delivered workshops on AI-assisted software engineering, including the many exciting new ways of making bad software faster",
+        "Worked with technical leadership on AI adoption, engineering practice and developer enablement",
+        "Worked with clients and stakeholders directly on understanding which AI processes would be to their benefit, and those why don't",
+        "Focused on the 'whys', not the 'hows' of using AI to prevent being outpaced by ever shifting technological landscapes"
+      ],
+    },
+    {
+      role: "Senior Software Engineer",
+      subtitle: "Embedded Client Team",
+      date: "2023",
+      companyName: "Mindera",
+      companyLink: "https://mindera.com",
+      location: "Porto, PT / UK",
+      whatDo:
+        "Fully embedded in a nearshore software team, building support systems and automation to improve warehouse operations while helping the team deliver and improve its engineering practices.",
+      blurbs: [
+        "Helped build support systems around warehouse returns using AWS Lambda, EventBridge and an event-driven architecture",
+        "Assisted with architecture of connected Lambda-based systems and the boundaries between the services involved",
+        "Built automation around operational processes that otherwise needed to be handled manually",
+        "Supported teammates heavily around test automation, debugging and general technical upskilling",
+        "Supported the final stages of a years-long migration that predated my joining",
+        "Tutored at Mindera School on Git and DevOps fundamentals",
+        "Adapted an open-source project into a custom gamified Git playground and created bespoke teaching material around it",
+      ],
+    },
+    {
       role: "Tech Lead",
       date: "2021",
-      current: true,
       companyName: "Applied Blockchain Ltd",
       companyLink: "https://appliedblockchain.com",
       location: "Porto, PT / London, UK",
@@ -310,6 +366,70 @@ export const store = {
       "I sometimes develop software for fun. Here's a couple of good examples.",
     rest: [
       {
+        name: "palchemy.club",
+        description:
+          "Palworld breeding solver powered by Prolog in your browser, because apparently that was a reasonable idea",
+        blurbs: [
+          "Used GPT-4 extensively to help build a non-trivial Prolog application despite having last seriously touched Prolog at university",
+          "A*-based breeding solver that works backwards from the Pal you want to breeding trees made from Pals you actually own",
+          "Ships an entire SWI-Prolog WASM machine to the browser to run the algorithm client-side",
+          "Reads real Palworld save files and extracts the player's boxes instead of making people type their collection in manually",
+          "AWS serverless save-processing pipeline involving S3 events, container Lambdas and an entirely reasonable 8GB Lambda",
+          "React frontend with animated day/night scenery, parallax, page transitions and far too much polish for a breeding calculator",
+          "Search progress includes useful technical diagnostics like 'Reticulating Splines' and 'Putting coal in the Algorithm™'",
+          "Features shittyPollerBecauseWebsocketsAreExpensive, which does exactly what it says on the tin",
+        ],
+        negs: [
+          "Ships an entire SWI-Prolog WASM machine to the browser to run the algorithm client-side",
+          "The save parser gets 8GB of RAM",
+          "This was supposed to be a breeding calculator",
+        ],
+        link: "https://palchemy.club/",
+      },
+      {
+        name: "pgotradewith.me",
+        description:
+          "Personal Pokémon GO trade catalogue which somehow turned into an excuse to keep training Pokémon classifiers",
+        blurbs: [
+          "Next.js trade catalogue generated from my actual Poke Genie scan data",
+          "Built multiple generations of classifiers for shiny Pokémon and the frankly unreasonable number of Pikachu forms",
+          "Current shiny classifier combines CNN features, species embeddings, attention and HSV colour histograms",
+          "Pikachu form classifier grew from a ResNet-50 baseline into its own attention-based model family",
+          "Pipeline uses SAM2 to extract Pokémon from screenshots before feeding them into the shiny classifier",
+          "Automated pipeline syncs new scans, classifies them and rebuilds the data used by the site",
+          "Exported models through ONNX so the useful bits could escape the Colab notebooks",
+          "Built labelling and verification tools because eventually you have to admit the training data is also your problem",
+        ],
+        negs: [
+          "There are multiple generations of Pikachu classifiers",
+          "Some Pokémon have species-specific shiny classifier exceptions because apparently they know what they did",
+          "This started as a webpage showing people what Pokémon I have for trade",
+        ],
+        link: "http://pgotradewith.me/",
+      },
+      {
+        name: "ORION CV-21",
+        description:
+          "An experiment on whether AI can make convincing television and broadcasting infrastructur with full sound and video",
+        blurbs: [
+          "React/Three.js TV shell with CRT effects, synthesized foley, channel tuning, a draggable remote and a full electronic program guide",
+          "Turns playlists and video lists into actual channels with their own branding, schedules, idents, program cards and ad breaks",
+          "Queue engine mixes videos, scenes and components while injecting breaks by video count or actual watched time",
+          "Built a tiny broadcast graphics system for WebGL idents, station cards, lower thirds and increasingly stupid fake advertisements",
+          "Netlify backend refreshes channel metadata from YouTube on a schedule and keeps the authored lineup separate from enriched runtime data",
+          "Each channel gets its own visual identity, from warm public-access television to an after-hours help desk and a secret backrooms QVC channel (channel 60)",
+          "Playback, tuning and remote behaviour are driven through a reducer/state-machine setup rather than being scattered across the UI",
+          "Easter eggs!",
+          "Contract tests, verified fakes, integration tests and Storybook scenes because apparently the fake television required real broadcast reliability",
+        ],
+        negs: [
+          "Had to write an entire fake advertising ecosystem",
+          "Has more documented broadcast architecture than some actual streaming apps",
+          "Should've been just a playlist viewer",
+        ],
+        link: "https://orion.joaoanes.website"
+      },
+      {
         name: "raid.network",
         description:
           "Elixir-powered PWA to help Pokemon Go players find other players",
@@ -393,6 +513,10 @@ export const store = {
       "Full-stack development",
       "Mentoring in software",
       "ML-powered code creation and analysis",
+      "Agentic software engineering",
+      "Context and memory systems",
+      "Model and agent evaluation",
+      "Knowledge systems",
       "Team management",
       "Release Planning and Management",
       "(useful) Agile methodologies",
@@ -403,7 +527,7 @@ export const store = {
       "User metrics research",
       "Product vision workmapping",
       "Gaming",
-      "AI (in the \"classic\" 198ies sense)",
+      'AI (in the "classic" 198ies sense)',
       "MLOps",
       "Culture sharing",
       "Fusion food",

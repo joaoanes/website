@@ -19,10 +19,11 @@
       <div class="bottom work">
         <div class="left column justify-start center align-start">
           <div class="container center limit-width column">
-            <div class="name">{name}</div>
+            <div class="name">
+              {#if link}<a href={link}>{name}</a>{:else}{name}{/if}
+            </div>
             <div class="description">{description}</div>
-            <a class="source" href={source}>Source</a>
-            {#if link}<a class="link" href={link}>Link</a>{/if}
+            {#if source}<a class="source" href={source}>Source</a>{/if}
           </div>
         </div>
         <div

@@ -32,6 +32,7 @@
     year,
     date,
     role,
+    subtitle,
     companyName,
     companyLink,
     current,
@@ -44,18 +45,23 @@
   <div class="history-container align-center">
     <div class="top">
       <div class="left flex align-end limit-width center">
-        <div class="current-container">
-        <span class="role">{role}</span>
-        {#if current}
-          <span class="current">(current)</span>
-        {/if}
+        <div class="subtitle-container">
+          <span class="role">{role}</span>
+          {#if subtitle}
+            <span class="subtitle">{subtitle}</span>
+          {/if}
         </div>
+        <div class="current-container">
           <span class="date">{date}</span>
-        
+          {#if current}
+            <span class="current">(current)</span>
+          {/if}
+        </div>
       </div>
       <div
         class="right container horizontal align-start limit-width center
-          justify-end">
+          justify-end"
+      >
         <div class="top">
           <a href={companyLink}> <span class="company">{companyName}</span> </a>
         </div>
@@ -110,6 +116,17 @@
 
   .location {
     font-size: 12px;
+  }
+
+  .current-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+
+  .subtitle-container {
+    display: flex;
+    flex-direction: column;
   }
 
   .role {

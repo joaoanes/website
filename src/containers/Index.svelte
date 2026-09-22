@@ -15,6 +15,9 @@
   let dorkMode = false
 
   let toggleDorkMode = () => (dorkMode = !dorkMode)
+
+  // The fold's background scene runs past the fold to meet the header's bottom border.
+  let headerElement = null
 </script>
 
 <div class="name-container">
@@ -39,9 +42,9 @@
 </div>
 
 <div class={dorkMode ? 'dork-mode' : ''}>
-  <AboveFold {store} {dorkMode} />
+  <AboveFold {store} {dorkMode} {headerElement} />
 
-  <Header />
+  <Header bind:element={headerElement} />
 
   <SkillPage {store} />
 

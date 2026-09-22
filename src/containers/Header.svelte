@@ -1,9 +1,15 @@
 <script>
+  // Exposed so the fold can measure how far past itself the background has to reach to
+  // meet this element's bottom border. Wrapping it in a positioned or block container
+  // instead would make that container the sticky containing block, and the nav would
+  // stop sticking as soon as the fold scrolled away.
+  export let element = null
+
   const scrollIntoView = (id) => () =>
     document.getElementById(id).scrollIntoView({ behavior: "smooth" })
 </script>
 
-<div class="header">
+<div class="header" bind:this={element}>
   <div class="left justify-end">
     <div class="container justify-start limit-width center">
       <div class="name-container">
