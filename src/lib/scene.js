@@ -101,12 +101,14 @@ const SHORE = {
 }
 
 // One wave at a time. `start` is how far out it is born — far enough that the haze has it
-// before it fades in — `width` is how broad the crest reads, and the period is how long
-// it takes to run in and die on the sand. Nine seconds is a calm beach.
+// before it fades in — and the period is how long it takes to run in and die on the sand.
 const WAVE = {
   periodMs: 10000,
   start: 200,
-  width: 22.5,
+  // Extent of the crest across its direction of travel, in metres — how thick the band of
+  // raised water is, shoreward edge to seaward edge. Not a wavelength and not a length
+  // along the coast: the crest is a ridge running the whole shoreline.
+  thickness: 22.5,
   height: 3.7,
   // How far up the sand the crest carries before it is spent.
   runout: -1.5,
@@ -118,7 +120,33 @@ const WAVE = {
   // Swash: how far up the sand the broken bore throws a sheet of water, and when in the
   // cycle it lands.
   swashReach: 2.4,
-  swashStart: 0.72
+  swashStart: 0.72,
+  // The backwash: once the bore has spent itself on the sand, the water draining back off
+  // it leaves as a small wave of its own, running seaward. It is wiped out well before the
+  // next one arrives, so nothing has to be kept in sync with anything.
+  backwashStart: 0.81,
+  // Signed. Negative emits a trough running out instead of a crest — the water drawing
+  // down and away rather than a bulge leaving. The seabed clamp below limits how deep a
+  // trough can actually go this close in, see the note on backwashOffset.
+  backwashHeight: 0.4,
+  backwashThickness: 12.5,
+  // Born this far seaward of the coast rather than on it. The crest cannot corrupt the
+  // sand — it is added to the height and masked by vShore, never fed back into depthAt()
+  // — but starting it on the waterline meant it spent its strongest moment being masked
+  // away and clipped against the seabed clamp. Out past the sand blend it is simply in
+  // open water.
+  backwashOffset: 18,
+  // Metres travelled over the window. This is deliberately decoupled from the incoming
+  // crest's speed, and that is a cheat: reach / window is an implied velocity, and at
+  // these defaults it works out well above what the crest is doing. It buys travel
+  // without touching the height, because height is a function of window position alone
+  // and never of distance.
+  //
+  // It was locked to the crest's speed for a while, which is physically right and looked
+  // wrong — at 6 m/s over a 1.5s window the wave covered nine metres and never read as
+  // going anywhere. Use backwashImpliedSpeed() if you want to see what you are asking
+  // for in m/s.
+  backwashReach: 60
 }
 
 // Uprush is fast and backwash is slow — roughly a quarter of the window running up and
@@ -134,6 +162,37 @@ const swashAt = (cycle) => {
   return t < 0.25
     ? smoothstep(0, 0.25, t)
     : 1 - smoothstep(0.25, 1, t)
+}
+
+// Instantaneous speed of the incoming crest, in metres per second. The travel curve is
+// mix(runout, start, (1 - cycle)^2), so this is its derivative: 2 * (start - runout) *
+// (1 - cycle) / period. It decelerates all the way in as it shoals, which is why the
+// crest's speed has to be sampled at a moment rather than stated as one number.
+export const crestSpeedAt = (cycle) =>
+  (2 * (WAVE.start - WAVE.runout) * Math.max(0, 1 - cycle)) / (WAVE.periodMs / 1000)
+
+// What the backwash reach actually amounts to in m/s, and how that compares to the crest
+// it left. Exported so the cheat is inspectable rather than buried: the previous version
+// of this control hid exactly this number and quietly became 70 m/s when the window
+// changed.
+export const backwashImpliedSpeed = () => {
+  const windowSeconds = (1 - WAVE.backwashStart) * (WAVE.periodMs / 1000)
+  const speed = WAVE.backwashReach / windowSeconds
+  return { speed, crest: crestSpeedAt(WAVE.backwashStart), windowSeconds }
+}
+
+// Where the backwash wave is, and how big it still is, this frame. It leaves the waterline
+// as the swash drains, runs out to sea and is spent by the end of the window — which is
+// why it needs no oscillator and no state: it is just another crest, going the other way.
+const backwashAt = (cycle) => {
+  const t = (cycle - WAVE.backwashStart) / (1 - WAVE.backwashStart)
+  if (t <= 0 || t >= 1) return { crest: 0, height: 0 }
+  return {
+    crest: WAVE.backwashOffset + WAVE.backwashReach * t,
+    // Faded in over the first stretch so it does not pop into being at the waterline,
+    // then run down to nothing.
+    height: WAVE.backwashHeight * (1 - t) * Math.min(1, t / 0.15)
+  }
 }
 
 // The simulation only covers water a pointer can plausibly reach. Everything past this is
@@ -420,7 +479,7 @@ export const createScene = ({ canvas, host, dorkMode = false, tier = 3 }) => {
         gridSize: WATER.gridSize,
         shore: SHORE,
         heading,
-        wave: { ...WAVE, cycle, swash: WAVE.swashReach * swashAt(cycle) },
+        wave: { ...WAVE, cycle, swash: WAVE.swashReach * swashAt(cycle), backwash: backwashAt(cycle) },
         palette
       })
       return

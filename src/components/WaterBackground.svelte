@@ -44,7 +44,7 @@
 
   // The repaired surface earns a shade more presence than the one that was failing, but
   // this is still a background: 0.15 is what the site has always used.
-  const OPACITY = { legacy: 0.15, glitch: 0.3, fixed: 0.25 }
+  const OPACITY = { legacy: 0.15, glitch: 0.3, fixed: 0.26 }
   $: opacity = opacityOverride ?? OPACITY[surface] ?? 0.15
 </script>
 

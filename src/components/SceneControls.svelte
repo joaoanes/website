@@ -6,7 +6,7 @@
   import { sceneTuning, applySceneTuning } from "../lib/scene"
 
   export let onChange = applySceneTuning
-  export let opacity = 0.25
+  export let opacity = 0.26
 
   // [path, label, min, max, step]. Paths are into sceneTuning.
   const GROUPS = [
@@ -49,12 +49,17 @@
       fields: [
         ["wave.periodMs", "period (ms)", 2000, 20000, 250],
         ["wave.start", "born at", 20, 300, 5],
-        ["wave.width", "crest width", 3, 50, 0.5],
+        ["wave.thickness", "crest thickness (m)", 3, 50, 0.5],
         ["wave.height", "crest height", 0, 4, 0.05],
         ["wave.breakerIndex", "breaker index", 0.2, 1.6, 0.02],
         ["wave.runout", "runout up sand", -20, 0, 0.5],
         ["wave.swashReach", "swash reach (m)", 0, 10, 0.1],
-        ["wave.swashStart", "swash timing", 0.3, 0.95, 0.01]
+        ["wave.swashStart", "swash timing", 0.3, 0.95, 0.01],
+        ["wave.backwashHeight", "backwash (m)", -3, 3, 0.05],
+        ["wave.backwashStart", "backwash timing", 0.4, 0.98, 0.01],
+        ["wave.backwashThickness", "backwash thick (m)", 2, 30, 0.5],
+        ["wave.backwashOffset", "backwash start (m)", 0, 30, 0.5],
+        ["wave.backwashReach", "backwash reach (m)", 5, 300, 5]
       ]
     },
     {

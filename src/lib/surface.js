@@ -51,12 +51,13 @@ uniform float uDepthRef;
 uniform float uShoalMax;
 uniform float uShoalPower;
 uniform float uWaveStart;
-uniform float uWaveWidth;
+uniform float uWaveThickness;
 uniform float uWaveHeight;
 uniform float uWaveCycle;
 uniform float uWaveRunout;
 uniform float uBreakerIndex;
 uniform float uSwash;
+uniform vec3 uBackwash;
 
 varying vec2 vMetres;
 varying float vHeight;
@@ -108,8 +109,12 @@ float depthAt(vec2 p) {
 // The profile is a single enveloped lobe rather than a periodic wave: one crest, a
 // shallow trough either side, and flat water beyond. A sine train cannot do that, which
 // is why the old spectrum always had three or four crests on screen at once.
-float swellLine(float seaward, float crest, float width, float skew) {
-  float s = (seaward - crest) / width;
+// Thickness is the crest's extent across its direction of travel, in metres — how thick
+// the band of raised water is from its shoreward edge to its seaward one. It is not a
+// wavelength, since there is only ever one crest, and not a length along the coast: the
+// crest is a ridge running the whole shoreline, because nothing here depends on x.
+float swellLine(float seaward, float crest, float thickness, float skew) {
+  float s = (seaward - crest) / thickness;
   // The shoreward face compresses as the wave shoals while the seaward face stays long.
   // A symmetrical hump can only ever rise and fall; skewing it puts a steep wall on the
   // front and a long back, which is the shape of a wave about to break.
@@ -123,7 +128,8 @@ float chopAt(vec2 p, float phase) {
   return sin(p.y * 0.85 - 5.0 * phase) * 0.6 + sin(p.x * 0.63 + p.y * 0.41 + 7.0 * phase) * 0.4;
 }
 
-// Shortest wavelength in the chop above, in metres.
+// Shortest wavelength in the chop above, in metres. This one really is a wavelength —
+// chopAt is periodic, unlike the single-lobe crests.
 const float CHOP_WAVELENGTH = 7.4;
 
 // Spacing between mesh rows at a given distance. Rows are spaced geometrically — each a
@@ -138,8 +144,8 @@ float rowSpacingAt(float d, float logRange) {
 // representable is the only honest option — the alternative is blobs drifting in from
 // the side, and a crest that pops into existence the moment it reaches fine enough
 // geometry to hold it.
-float resolvable(float d, float wavelength, float logRange) {
-  return 1.0 - smoothstep(0.35 * wavelength, 0.9 * wavelength, rowSpacingAt(d, logRange));
+float resolvable(float d, float featureSize, float logRange) {
+  return 1.0 - smoothstep(0.35 * featureSize, 0.9 * featureSize, rowSpacingAt(d, logRange));
 }
 
 void main() {
@@ -199,15 +205,23 @@ void main() {
   float unbroken = shoalGain;
   float boreLimit = uBreakerIndex * crestDepth / max(uWaveHeight, 0.01);
   float amplitude = min(unbroken, boreLimit) * smoothstep(0.0, 0.08, uWaveCycle)
-    * resolvable(crest, uWaveWidth, logRange);
+    * resolvable(crest, uWaveThickness, logRange);
 
   // A wave that has reached its depth limit is breaking; its front face stands up.
   float breakingNow = 1.0 - clamp(boreLimit / max(unbroken, 0.01), 0.0, 1.0);
   float skew = max(breakingNow, 1.0 - smoothstep(0.0, uDepthRef, crestDepth));
 
-  float wave = swellLine(seaward, crest, uWaveWidth, skew) * amplitude;
+  float wave = swellLine(seaward, crest, uWaveThickness, skew) * amplitude;
   float chop = chopAt(plane, uSlow) * uChop * resolvable(forward, CHOP_WAVELENGTH, logRange);
-  float swellHeight = (wave * uWaveHeight + chop) * uSwell * vShore;
+
+  // The backwash. Water draining off the sand leaves as a small wave of its own running
+  // back out to sea — the same crest profile as the incoming swell, travelling the other
+  // way, with no skew because nothing is shoaling it. It is spent before the next wave
+  // arrives, so it needs no state and nothing to keep it in step.
+  // Packed as (crest position, height, thickness).
+  float backwash = swellLine(seaward, uBackwash.x, uBackwash.z, 0.0) * uBackwash.y;
+
+  float swellHeight = (wave * uWaveHeight + backwash + chop) * uSwell * vShore;
 
   // The simulation only covers the near water, where a pointer can actually reach. Its
   // contribution is faded out at the edges of that box so pushed waves dissolve into the
@@ -387,12 +401,15 @@ export const createSurface = ({ gl, caps, across, deep }) => {
     gl.uniform1f(shader.uniforms.uShoalMax, shore.shoalMax)
     gl.uniform1f(shader.uniforms.uShoalPower, shore.shoalPower)
     gl.uniform1f(shader.uniforms.uWaveStart, wave.start)
-    gl.uniform1f(shader.uniforms.uWaveWidth, wave.width)
+    gl.uniform1f(shader.uniforms.uWaveThickness, wave.thickness)
     gl.uniform1f(shader.uniforms.uWaveHeight, wave.height)
     gl.uniform1f(shader.uniforms.uWaveCycle, wave.cycle)
     gl.uniform1f(shader.uniforms.uWaveRunout, wave.runout)
     gl.uniform1f(shader.uniforms.uBreakerIndex, wave.breakerIndex)
     gl.uniform1f(shader.uniforms.uSwash, wave.swash)
+    gl.uniform3f(
+      shader.uniforms.uBackwash, wave.backwash.crest, wave.backwash.height, wave.backwashThickness
+    )
     gl.uniform2f(shader.uniforms.uForward, heading.forwardX, heading.forwardY)
     gl.uniform2f(shader.uniforms.uRight, heading.rightX, heading.rightY)
     gl.uniform2f(shader.uniforms.uEye, heading.eyeX, heading.eyeY)
