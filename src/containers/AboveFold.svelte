@@ -60,7 +60,7 @@
     : "shader: water.v1"
 </script>
 
-<div class="fold" bind:this={fold}>
+<div class="fold" bind:this={fold} style="--overhang: {overhang}px">
   <div class="page-container above-fold">
     <div class="left align-center">
       <div class="name-container limit-width">
@@ -201,6 +201,7 @@
     margin-left: auto;
     margin-right: auto;
     flex-direction: column;
+    position: relative;
   }
 
   /* Only mounted while the surface is failing. A full-bleed blended layer left animating
@@ -222,16 +223,17 @@
   }
 
   .beam {
+    --band: 14%;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    height: 14%;
+    height: 100%;
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.22) 50%,
-      rgba(0, 0, 0, 0) 100%
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.22) calc(var(--band) / 2),
+      rgba(0, 0, 0, 0) var(--band)
     );
     animation: hero-scan 1.4s linear infinite;
   }
@@ -241,8 +243,10 @@
   }
 
   .fault {
+    position: absolute;
+    top: 100%;
+    left: 0;
     margin-top: 16px;
-    align-self: flex-start;
     font-size: 11px;
     letter-spacing: 0.06em;
     background: #f0e9d8;
@@ -277,10 +281,10 @@
 
   @keyframes hero-scan {
     from {
-      transform: translateY(-120%);
+      transform: translateY(calc(var(--band) * -1));
     }
     to {
-      transform: translateY(520%);
+      transform: translateY(100%);
     }
   }
 
@@ -306,6 +310,25 @@
   }
 
   @media (max-width: 1280px) {
+    .above-fold {
+      box-sizing: border-box;
+      min-height: calc(100vh - var(--overhang, 0px));
+      min-height: calc(100svh - var(--overhang, 0px));
+      justify-content: flex-start;
+    }
+
+    .left {
+      flex: 0 0 auto;
+    }
+
+    .right {
+      flex: 1 1 auto;
+    }
+
+    .right .name-container {
+      flex: 1;
+    }
+
     .page-container {
       padding-bottom: 100px;
     }
@@ -331,9 +354,13 @@
     }
 
     .description {
-      font-size: 12px;
-      margin-top: 20px;
+      font-size: 16px;
+      margin-top: 40px;
       display: flex;
+    }
+
+    .lookingFor {
+      margin-top: auto;
     }
     .description * {
       margin-left: 0;
@@ -341,7 +368,7 @@
     }
 
     .quote {
-      margin-top: 10px;
+      margin-top: 40px;
     }
 
     .subtitle {

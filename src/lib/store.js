@@ -504,6 +504,7 @@ export const store = {
           "I'm sure a Svelte dev can look at the code and guess my code heritage",
         ],
         source: "https://github.com/joaoanes/website",
+        link: "https://joaoanes.website/?tune"
       },
     ],
   },

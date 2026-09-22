@@ -44,15 +44,17 @@ body {
 }
 
 a {
-	text-decoration: none;
-}
-
-a:hover {
+	color: #1a4fd6;
 	text-decoration: underline;
 }
 
 a:visited {
-	color: black;
+	color: #0d2f94;
+}
+
+a:hover {
+	text-decoration-thickness: 2px;
+	text-underline-offset: 2px;
 }
 
 label {
@@ -242,8 +244,12 @@ button:hover {
 }
 
 .dork-mode a {
-	color: white;
+	color: #7fb0ff;
 	text-decoration: underline;
+}
+
+.dork-mode a:visited {
+	color: #5b8cf5;
 }
 
 .dork-mode .header {
